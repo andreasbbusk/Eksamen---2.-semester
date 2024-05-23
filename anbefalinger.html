@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Sidebeskrivelse -->
+    <meta name="description" content="Her finder du noget om hvad de gæster der træner hos HOF har at sige.">
+    <!-- Keywords til søgemaskine -->
+    <meta name="keywords" content="styrketræning">
+    <title>Anbefalinger fra kunder</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="img/logo.webp">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="scripts/loginChange.js" defer></script>
+    <script src="scripts/loginModal.js" defer></script>
+    <script src="scripts/navbar.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap" rel="stylesheet">
+    <link
+        href="https://api.fontshare.com/v2/css?f=bevellier@100,101,200,201,300,301,400,401,500,501,600,601,700,701,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <!-- Mobilnavigation | Fullscreen sidebar med toggle -->
+        <nav>
+            <div class="mobile-menu">
+                <div id="main-nav" class="overlay">
+                    <div class="navtop">
+                        <img class="inner-logo" src="img/logo.webp" alt="Logo">
+                        <div class="close-menu">
+                            <img class="profile-icon2" src="img/profilikon.png" alt="Profilikon">
+                            <a href="#"><img class="closebtn" src="img/closed.png" alt="Burgerknap"></a>
+                        </div>
+                    </div>
+                    <!-- Yderste menu med overordnede menupunkter -->
+                    <div class="overlay-content">
+                        <a id="ht-btn" href="#">Holdtræning &#8599;</a>
+                        <a href="errorpage.html">Personlig træning</a>
+                        <a href="booking.html">Booking</a>
+                        <a href="errorpage.html">Events</a>
+                        <a id="om-btn" href="#">Om HOF &#8599;</a>
+                        <hr class="line">
+                    </div>
+                </div>
+                <!-- Første dropdownmenu -->
+                <div id="ht-nav" class="overlay">
+                    <div class="navtop">
+                        <img class="inner-logo" src="img/logo.webp" alt="Logo">
+                        <a href="#" id="back-btn2" class="closebtn">&larr;</a>
+                    </div>
+                    <div class="overlay-content">
+                        <a href="holdtraening.html">TRX-suspension training</a>
+                        <a href="holdtraening.html">CrossGym</a>
+                        <a href="holdtraening.html">Kvindepower</a>
+                        <a href="holdtraening.html">Fyraftenstræning</a>
+                        <a href="holdtraening.html">Fitnessrun</a>
+                        <hr class="line">
+                    </div>
+                </div>
+                <!-- Anden dropdownmenu -->
+                <div id="om-nav" class="overlay">
+                    <div class="navtop">
+                        <img class="inner-logo" src="img/logo.webp" alt="Logo">
+                        <a href="#" id="back-btn3" class="closebtn">&larr;</a>
+                    </div>
+                    <div class="overlay-content">
+                        <a href="instruktoerer.html">Instruktører</a>
+                        <a href="errorpage.html">Kontakt</a>
+                        <a href="errorpage.html">Anbefalinger</a>
+                        <a href="errorpage.html">Værdier</a>
+                        <hr class="line">
+                    </div>
+                </div>
+                <!-- Den synlige header på mobilstørrelse -->
+                <div class="mobile-header">
+                    <a href="index.html"><img class="logo" src="img/logo.webp" alt="Logo"></a>
+                    <div class="open-menu">
+                        <a href="#"><img id="profile-icon" src="img/profilikon.webp" alt="Profilikon"></a>
+                        <span class="burger-btn"><img src="img/open.webp" alt="Burgerknap"></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Desktopnavigation -->
+        <nav class="desktop-header">
+            <a href="index.html"><img class="logo" src="img/logo.webp" alt="Logo"></a>
+            <!-- Første dropdownpunkt -->
+            <div class="desktop-menu">
+                <div class="dropdown">
+                    <a class="dropbtn">Holdtræning</a>
+                    <div class="dropdown-content">
+                        <a href="holdtraening.html">TRX-suspension training</a>
+                        <a href="holdtraening.html">CrossGym</a>
+                        <a href="holdtraening.html">Kvindepower</a>
+                        <a href="holdtraening.html">Fyraftenstræning</a>
+                        <a href="holdtraening.html">Fitnessrun</a>
+                    </div>
+                </div>
+                <a href="errorpage.html">Personlig træning</a>
+                <a href="booking.html">Booking</a>
+                <a href="errorpage.html">Events</a>
+                <!-- Andet dropdownpunkt -->
+                <div class="dropdown">
+                    <a class="dropbtn">Om HOF</a>
+                    <div class="dropdown-content">
+                        <a href="instruktoerer.html">Instruktører</a>
+                        <a href="errorpage.html">Kontakt</a>
+                        <a href="errorpage.html">Anbefalinger</a>
+                        <a href="errorpage.html">Værdier</a>
+                    </div>
+                </div>
+                <img class="profile-icon" src="img/profilikon.webp" alt="Profile icon">
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main content -->
+    <main>
+        <h1 class="page-title">Anbefalinger</h1>
+        <section>
+            <div class="page-banner">
+                <h2>Holdtræning</h2>
+            </div>
+            <div class="anbefalinger">
+                <!-- Citatboks, med længere anmeldelser fra kunder -->
+                <div class="anbefalinger-box">
+                    <p>
+                        Charlotte kan motivere, inspirere og ved hvornår hun skal støtte og hvornår der er mere at
+                        presse af. Træningen er for ALLE og man kan starte fra 0 og være sikker på at blive både sund,
+                        stærk og glad. <br> <br>
+                        Træningen er meget varieret og der er en varm, rar, legende og humoristisk atmosfære på
+                        holdende: ALLE er velkomne og bliver taget godt imod på det niveau man nu engang starter på. Jeg
+                        sender mine største anbefalinger om simpelthen at komme igang. Jeg skrev bare til Charlotte og
+                        så kom den første aftale i kalenderen!</p>
+                    <h4>- Mal</h4>
+                </div>
+                <!-- Udplukket citat fra kunde -->
+                <div class="anbefalinger-citat">
+                    <h3>“Naturen er den smukke, dejlige ramme for alt træning.”</h3>
+                </div>
+            </div>
+            <div class="anbefalinger">
+                <!-- Udplukket citat fra kunde -->
+                <div class="anbefalinger-citat">
+                    <h3>“Det er også en pause fra arbejdet, kontoret, huset og computeren.”</h3>
+                </div>
+                <!-- Citatboks, med længere anmeldelser fra kunder -->
+                <div class="anbefalinger-box">
+                    <p>
+                        Selvom udgangspunktet er noget begrædeligt, må jeg sige, at både setuppet og Fru Holm er intet
+                        mindre end enestående. <br> <br> Jeg er virkelig begejstret for det hele og kan ikke understrege
+                        nok, hvor
+                        imponerende jeg synes det er. Det fortjener uden tvivl ti store bøffer herfra!</p>
+                    <h4>- MS</h4>
+                </div>
+            </div>
+            <div class="anbefalinger">
+                <!-- Citatboks, med længere anmeldelser fra kunder -->
+                <div class="anbefalinger-box">
+                    <p>
+                        Det er aldrig kedeligt at træne hos HOF. Som par, tæt på pensionsalderen, har vi valgt at at
+                        træne hos Charlotte. Her er en uformel stemning, et herligt fællesskab og de afvekslende
+                        udfordringer tager vi "i stiv arm", med smil på læben og sved på panden. Ingen kan alt - alle
+                        kan noget! <br> <br>
+                        Vi vil gøre vores bedste, for at holde os "fit" længst muligt. Det synes vi, vi skylder vores
+                        børn og børnebørn, og ikke mindst os selv.</p>
+                    <h4>- MJK & NJK</h4>
+                </div>
+                <!-- Udplukket citat fra kunde -->
+                <div class="anbefalinger-citat">
+                    <h3>“Charlotte er den bedste træner jeg nogensinde har haft!”</h3>
+                </div>
+            </div>
+
+            <div class="page-banner">
+                <h2>Personlig træning</h2>
+            </div>
+            <div class="anbefalinger">
+                <!-- Citatboks, med længere anmeldelser fra kunder -->
+                <div class="anbefalinger-box">
+                    <p>
+                        Tak for et super forløb. Det var en stor overvindelse at kontakte dig og få den indledende snak
+                        om mine behov. Vi lavede en plan og gik i gang ugen efter. På grund af en diskusprolaps,
+                        skavanker og overvægt, havde jeg brug for at styrke hele kroppen og undgå smerter. <br> <br> Du
+                        har
+                        trofast mødt op to gange om ugen, selv i snestorm og frost, altid med et smil. Efter 20 timer
+                        har jeg fået en stærkere krop, mere energi i hverdagen og tabt 11 kg. Din humor og motiverende
+                        væremåde har været en kæmpe inspiration. Varme anbefalinger til andre, der vil have mere energi
+                        eller styrke.</p>
+                    <h4>- BF</h4>
+                </div>
+                <!-- Udplukket citat fra kunde -->
+                <div class="anbefalinger-citat">
+                    <h3>“Jeg har trofast mødt op til to gange om ugen, selv i snestorm og frost, altid med et smil."”
+                    </h3>
+                </div>
+            </div>
+            <div class="anbefalinger">
+                <!-- Udplukket citat fra kunde -->
+                <div class="anbefalinger-citat">
+                    <h3>"Jeg havde brug for mere helhedsorienteret træning - det fik jeg, og meget mere end det."</h3>
+                </div>
+                <!-- Citatboks, med længere anmeldelser fra kunder -->
+                <div class="anbefalinger-box">
+                    <p>
+                        I sensommeren 2021, kom jeg til Charlotte med et beskedent ønske om øget kropsbevidsthed; om
+                        igen at kunne mærke min krop og muskler. Det fik jeg - og meget mere end det. <br> <br> Jeg
+                        havde
+                        tidligere dyrket løbetræning, men følte, at jeg havde brug for mere helhedsorienteret træning.
+                        Sideløbende med mit personlige forløb har jeg trænet på Charlottes outdoorfitness-hold en til to
+                        gange om ugen.</p>
+                    <h4>- HK</h4>
+                </div>
+            </div>
+            <div class="anbefalinger">
+                <!-- Citatboks, med længere anmeldelser fra kunder -->
+                <div class="anbefalinger-box">
+                    <p>
+                        Hvordan er Charlotte som personlig træner? Charlotte tager udgangspunkt i dig! Måske tænker du,
+                        ja, selvfølgelig gør hun det. Eller måske forestiller du dig, at personlig træning er en træner,
+                        som råber dig ind i hovedet, hvis du ikke præsterer maksimalt hver gang. <br> Charlotte
+                        "skubber" til
+                        dig, der hvor du er på dagen - og det er virkelig rart på dage, hvor man er helt kvæstet og uden
+                        motivation. Charlotte favner dig, hvor du er, og skubber dig i den rigtige retning, så du
+                        oplever fremgang, også på de dage, hvor hovedet er allermest til sofa, slik og Netflix.</p>
+                    <h4>- MI</h4>
+                </div>
+                <!-- Udplukket citat fra kunde -->
+                <div class="anbefalinger-citat">
+                    <h3>"Charlotte favner dig, hvor du er, og skubber dig i den rigtige retning."</h3>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <div class="footer-menupunkter">
+                    <div class="footer-section">
+                        <h4>Holdtræning</h4>
+                        <ul class="footer-mobile-menu">
+                            <li><a href="holdtraening.html">TRX-suspension</a></li>
+                            <li><a href="holdtraening.html">Training</a></li>
+                            <li><a href="holdtraening.html">CrossGym</a></li>
+                            <li><a href="holdtraening.html">Kvindepower</a></li>
+                            <li><a href="holdtraening.html">Fyraftenstræning</a></li>
+                            <li><a href="holdtraening.html">FitnessRun</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4><a href="errorpage.html">Personlig træning</a></h4>
+                    </div>
+                    <div class="footer-section">
+                        <h4><a href="booking.html">Booking</a></h4>
+                    </div>
+                    <div class="footer-section">
+                        <h4><a href="errorpage.html">Events</a></h4>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Om HOF</h4>
+                        <ul class="footer-mobile-menu">
+                            <li><a href="instruktoerer.html">Instruktører</a></li>
+                            <li><a href="errorpage.html">Kontakt</a></li>
+                            <li><a href="anbefalinger.html">Anbefalinger</a></li>
+                            <li><a href="errorpage.html">Værdier</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="social">
+                    <a href="https://www.instagram.com/holmoutdoorfitness/" target="_blank"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=100063334863141" target="_blank"><i
+                            class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+            <div class="footer-right">
+                <div class="footer-section signup">
+                    <h4>Tilmeld dig</h4>
+                    <a class="btn" href="booking.html">BOOK DIN TRÆNING</a>
+                </div>
+                <div class="footer-section contact">
+                    <p>Vadstedvej 21, Oksenvad<br>6560 Sommersted<br>Tlf +45 5380 6048<br>holmoutdoorfitness@outlook.com
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal-btn"></div>
+    <div class="login-modal">
+        <div class="login-modal-content">
+            <div>
+                <img id="trail7" src="img/trail7.webp" alt="">
+                <div class="cross">
+                    <div class="horizontal"></div>
+                    <div class="vertical"></div>
+                </div>
+            </div>
+            <div class="login-content current-container">
+                <div class="form-content">
+                    <h2>Log ind</h2>
+                    <!-- Label form -->
+                    <form class="login-form" action="errorpage.html">
+                        <label class="login-label">E-mail eller brugernavn</label>
+                        <input class="login-input" type="text" name="E-mail eller adgangskode">
+                        <label class="login-label">Adgangskode</label>
+                        <input class="login-input" type="password" name="Adgangskode">
+                        <input class="input-btn" type="submit" value="Log ind">
+                    </form>
+                    <div class="tilmeld-link">
+                        <h4>Ny hos HOF?</h4>
+                        <!-- Content skift i HTML -->
+                        <a id="tilmeld-dig">Tilmeld dig her!</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img id="trail8" src="img/trail8.webp" alt="Trailgrafik">
+            </div>
+        </div>
+    </div>
+
+    <!-- Tilmeld content der ændres i HTML'en -->
+    <div class="signup-content">
+        <div class="form-content">
+            <h2>Tilmeld dig</h2>
+            <form class="login-form" action="errorpage.html">
+                <!-- Form content -->
+                <label class="login-label">Fornavn</label>
+                <input class="login-input" type="text" name="E-mail eller adgangskode">
+                <label class="login-label">E-mail eller brugernavn</label>
+                <input class="login-input" type="text" name="E-mail eller adgangskode">
+                <label class="login-label">Adgangskode</label>
+                <input class="login-input" type="password" name="E-mail eller adgangskode">
+                <label class="login-label">Bekræft adgangskode</label>
+                <input class="login-input" type="password" name="Adgangskode">
+                <input class="input-btn" type="submit" value="Tilmeld dig">
+            </form>
+            <div class="tilmeld-link">
+                <h4>Har du allerede en konto?</h4>
+                <a id="login">Logind her!</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

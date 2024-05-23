@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Sidebeskrivelse -->
+    <meta name="description"
+        content="HOF's forside. Her kan du høre mere om hvad vi tilbyder, hvad vores kunder siger, og få svar på nogle af dine spørgsmål">
+    <!-- Keywords til søgemaskine -->
+    <meta name="keywords"
+        content="styrketræning, TRX, holdtræning, holdtræning for kvinder, inspiration til holdtræning, udendørstræning">
+    <title>Velkommen til HOF</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="img/logo.webp">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="scripts/script.js" defer></script>
+    <script src="scripts/navbar.js" defer></script>
+    <script src="scripts/loginModal.js" defer></script>
+    <script src="scripts/loginChange.js" defer></script>
+    <script src="scripts/accordionFilter.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap" rel="stylesheet">
+    <link
+        href="https://api.fontshare.com/v2/css?f=bevellier@100,101,200,201,300,301,400,401,500,501,600,601,700,701,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <!-- Mobilnavigation | Fullscreen sidebar med toggle -->
+        <nav>
+            <div class="mobile-menu">
+                <div id="main-nav" class="overlay">
+                    <div class="navtop">
+                        <img class="inner-logo" src="img/logo.webp" alt="Logo">
+                        <div class="close-menu">
+                            <img class="profile-icon2" src="img/profilikon.png" alt="Profilikon">
+                            <a href="#"><img class="closebtn" src="img/closed.png" alt="Burgerknap"></a>
+                        </div>
+                    </div>
+                    <!-- Yderste menu med overordnede menupunkter -->
+                    <div class="overlay-content">
+                        <a id="ht-btn" href="#">Holdtræning &#8599;</a>
+                        <a href="errorpage.html">Personlig træning</a>
+                        <a href="booking.html">Booking</a>
+                        <a href="errorpage.html">Events</a>
+                        <a id="om-btn" href="#">Om HOF &#8599;</a>
+                        <hr class="line">
+                    </div>
+                </div>
+                <!-- Første dropdownmenu -->
+                <div id="ht-nav" class="overlay">
+                    <div class="navtop">
+                        <img class="inner-logo" src="img/logo.webp" alt="Logo">
+                        <a href="#" id="back-btn2" class="closebtn">&larr;</a>
+                    </div>
+                    <div class="overlay-content">
+                        <a href="holdtraening.html">TRX-suspension training</a>
+                        <a href="holdtraening.html">CrossGym</a>
+                        <a href="holdtraening.html">Kvindepower</a>
+                        <a href="holdtraening.html">Fyraftenstræning</a>
+                        <a href="holdtraening.html">Fitnessrun</a>
+                        <hr class="line">
+                    </div>
+                </div>
+                <!-- Anden dropdownmenu -->
+                <div id="om-nav" class="overlay">
+                    <div class="navtop">
+                        <img class="inner-logo" src="img/logo.webp" alt="Logo">
+                        <a href="#" id="back-btn3" class="closebtn">&larr;</a>
+                    </div>
+                    <div class="overlay-content">
+                        <a href="instruktoerer.html">Instruktører</a>
+                        <a href="errorpage.html">Kontakt</a>
+                        <a href="errorpage.html">Anbefalinger</a>
+                        <a href="errorpage.html">Værdier</a>
+                        <hr class="line">
+                    </div>
+                </div>
+                <!-- Den synlige header på mobilstørrelse -->
+                <div class="mobile-header">
+                    <a href="index.html"><img class="logo" src="img/logo.webp" alt="Logo"></a>
+                    <div class="open-menu">
+                        <a href="#"><img id="profile-icon" src="img/profilikon.webp" alt="Profilikon"></a>
+                        <span class="burger-btn"><img src="img/open.webp" alt="Burgerknap"></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Desktopnavigation -->
+        <nav class="desktop-header">
+            <a href="index.html"><img class="logo" src="img/logo.webp" alt="Logo"></a>
+            <!-- Første dropdownpunkt -->
+            <div class="desktop-menu">
+                <div class="dropdown">
+                    <a class="dropbtn">Holdtræning</a>
+                    <div class="dropdown-content">
+                        <a href="holdtraening.html">TRX-suspension training</a>
+                        <a href="holdtraening.html">CrossGym</a>
+                        <a href="holdtraening.html">Kvindepower</a>
+                        <a href="holdtraening.html">Fyraftenstræning</a>
+                        <a href="holdtraening.html">Fitnessrun</a>
+                    </div>
+                </div>
+                <a href="errorpage.html">Personlig træning</a>
+                <a href="booking.html">Booking</a>
+                <a href="errorpage.html">Events</a>
+                <!-- Andet dropdownpunkt -->
+                <div class="dropdown">
+                    <a class="dropbtn">Om HOF</a>
+                    <div class="dropdown-content">
+                        <a href="instruktoerer.html">Instruktører</a>
+                        <a href="errorpage.html">Kontakt</a>
+                        <a href="errorpage.html">Anbefalinger</a>
+                        <a href="errorpage.html">Værdier</a>
+                    </div>
+                </div>
+                <img class="profile-icon" src="img/profilikon.webp" alt="Profile icon">
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main content -->
+    <main>
+        <!-- Første sektion med video som hero  -->
+        <section class="front-hero">
+            <div class="front-hero-header">
+                <h1>Det er ikke bare træning</h1>
+                <div id="front-hero-header-h1-2">
+                    <h1>Det er fællesskab</h1>
+                </div>
+            </div>
+            <div>
+                <!-- Vigtigt at anvende muted, da video ikke autoplayer korrekt ellers. -->
+                <video autoplay loop muted id="banner-video" src="media/HOF.mp4"></video>
+            </div>
+        </section>
+
+        <!-- Sektion med tilbudskatalog -->
+        <section class="front-action">
+            <h1>Hvad tilbyder vi?</h1>
+            <div class="front-muligheder">
+                <div class="front-personlig">
+                    <h3>Personlig træning</h3>
+                    <img src="img/personlig-fitness.webp" alt="Personlig træning">
+                </div>
+                <div class="front-hold">
+                    <h3>Holdtræning</h3>
+                    <img src="img/medlemmer.webp" alt="Medlemmer">
+                </div>
+            </div>
+            <div class="front-call-to-action">
+                <h3>Lyder det som noget for dig?</h3>
+                <!-- Forskellige classes for generel styling og tekstfarve -->
+                <a class="btn-black btn" href="booking.html">Book din træning</a>
+            </div>
+        </section>
+
+        <!-- Promovideo -->
+        <section class="front-promo">
+            <div class="front-promo-header">
+                <h1>Opdag, hvordan vores medlemmer skaber <br> forandring og finder succes.</h1>
+                <p>Medlemmers rejser, din inspiration...</p>
+            </div>
+            <div class="front-promo-video">
+                <video controls id="promo-video" src="media/InterviewHOF.mp4"></video>
+                <!-- Forskellige classes for generel styling og tekstfarve -->
+                <a class="btn-black btn" href="booking.html">Book din træning</a>
+            </div>
+        </section>
+
+        <!-- Interaktiv sektion, hvor der klikkes rundt på kroppen -->
+        <section class="interactive-infographic">
+            <div class="info">
+                <h3 class="page-title" id="title-info">De naturlige fordele</h3>
+                <p>Udendørs træning tilbyder en unik mulighed for at nyde naturen og samtidig forbedre din sundhed.
+                    Oplev de mange fordele ved at træne udenfor - fra mental sundhed til stærkere muskler og led.</p>
+                <img class="info-skift" src="img/lungeinfo.webp" alt="">
+            </div>
+            <div class="interaction">
+                <p>Klik på punkterne i illustrationen for at udforske, hvordan udendørs træning kan styrke hele din
+                    krop.</p>
+                <img src="img/interactiveperson.webp" alt="Interactive model" usemap="#infographic">
+                <!-- Anvendt map til placering af punkter, hvor coords definerer koordinater for x- og y-aksen på billedets rammer -->
+                <map name="infographic">
+                    <area class="area-dots" id="hoved" coords="148,27,30" shape="circle">
+                    <area class="area-dots" id="hjerte" coords="171,228,30" shape="circle">
+                    <area class="area-dots" id="lunge" coords="145,250,30" shape="circle">
+                    <area class="area-dots" id="haand" coords="32,406,30" shape="circle">
+                    <area class="area-dots" id="laar" coords="179,522,30" shape="circle">
+                    <area class="area-dots" id="fod" coords="131,770,30" shape="circle">
+                </map>
+            </div>
+        </section>
+
+        <!-- FAQ sektion med collapsible -->
+        <section class="faq">
+            <h1>Ofte stillede spørgsmål</h1>
+            <div class="faq-box">
+                <div class="faq-buttons">
+                    <button id="training-btn" class="faq-btn">Træning</button>
+                    <button id="booking-btn" class="faq-btn">Booking</button>
+                    <button id="events-btn" class="faq-btn">Events</button>
+                    <button id="about-btn" class="faq-btn">Om</button>
+                </div>
+                <div class="current-active">
+                    <div class="faq-q">
+                        <!-- Anvendt details, som er et native HTML element for nemmere skabelse af accordion -->
+                        <!-- "faq-q" er det originale content, som vil bliver udskiftet med andet HTML nedenfor -->
+                        <details>
+                            <summary>
+                                Tilbyder I personlige træningsprogrammer?
+                            </summary>
+                            <p>Ja, vi tilbyder personlige træningsprogrammer skræddersyet til dine individuelle behov og
+                                mål. Uanset om du vil tabe dig, opbygge muskler, forbedre din kondition eller noget helt
+                                fjerde, kan vi hjælpe dig med at nå dine mål.</p>
+                        </details>
+                        <details>
+                            <summary>
+                                Hvilke typer holdtræning tilbyder I?
+                            </summary>
+                            <p>Vi tilbyder et bredt udvalg af holdtræning, der passer til alle niveauer og interesser.
+                                Nogle
+                                af vores mest populære hold:
+                                Trx-suspension, crossgym, kvindepower, fitnessrun og fyraftenstræning.</p>
+                        </details>
+                        <details>
+                            <summary>
+                                Hvordan kommer jeg i gang med træning hos jer?
+                            </summary>
+                            <p>For at komme i gang med træning hos os, kan du: <br>
+                                <strong>Tilmeld dig:</strong> Besøg vores hjemmeside eller ring til os. <br>
+                                <strong>Book en introduktionstime:</strong> Mød vores trænere og få vejledning. <br>
+                                <strong>Start din træning:</strong> Begynd din rejse.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>
+                                Hvad skal jeg medbringe til min første træning?
+                            </summary>
+                            <p>Til din første træning anbefaler vi, at du medbringer: <br>
+                                <strong>Træningstøj:</strong>Komfortabelt og passende.
+                                <strong>Træningssko:</strong>Egnede sko med god støtte.
+                                <strong>Vandflaske:</strong>Hold dig hydreret.
+                                <strong>Håndklæde:</strong>Til at tørre sved af.
+                            </p>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <div class="footer-menupunkter">
+                    <div class="footer-section">
+                        <h4>Holdtræning</h4>
+                        <ul class="footer-mobile-menu">
+                            <li><a href="holdtraening.html">TRX-suspension</a></li>
+                            <li><a href="holdtraening.html">Training</a></li>
+                            <li><a href="holdtraening.html">CrossGym</a></li>
+                            <li><a href="holdtraening.html">Kvindepower</a></li>
+                            <li><a href="holdtraening.html">Fyraftenstræning</a></li>
+                            <li><a href="holdtraening.html">FitnessRun</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4><a href="errorpage.html">Personlig træning</a></h4>
+                    </div>
+                    <div class="footer-section">
+                        <h4><a href="booking.html">Booking</a></h4>
+                    </div>
+                    <div class="footer-section">
+                        <h4><a href="errorpage.html">Events</a></h4>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Om HOF</h4>
+                        <ul class="footer-mobile-menu">
+                            <li><a href="instruktoerer.html">Instruktører</a></li>
+                            <li><a href="errorpage.html">Kontakt</a></li>
+                            <li><a href="anbefalinger.html">Anbefalinger</a></li>
+                            <li><a href="errorpage.html">Værdier</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="social">
+                    <a href="https://www.instagram.com/holmoutdoorfitness/" target="_blank"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=100063334863141" target="_blank"><i
+                            class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+            <div class="footer-right">
+                <div class="footer-section signup">
+                    <h4>Tilmeld dig</h4>
+                    <a class="btn" href="booking.html">BOOK DIN TRÆNING</a>
+                </div>
+                <div class="footer-section contact">
+                    <p>Vadstedvej 21, Oksenvad<br>6560 Sommersted<br>Tlf +45 5380 6048<br>holmoutdoorfitness@outlook.com
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal-btn"></div>
+    <div class="login-modal">
+        <div class="login-modal-content">
+            <div>
+                <img id="trail7" src="img/trail7.webp" alt="Trailgrafik">
+                <div class="cross">
+                    <div class="horizontal"></div>
+                    <div class="vertical"></div>
+                </div>
+            </div>
+            <div class="login-content current-container">
+                <div class="form-content">
+                    <h2>Log ind</h2>
+                    <!-- Label form -->
+                    <form class="login-form" action="errorpage.html">
+                        <label class="login-label">E-mail eller brugernavn</label>
+                        <input class="login-input" type="text" name="E-mail eller adgangskode">
+                        <label class="login-label">Adgangskode</label>
+                        <input class="login-input" type="password" name="Adgangskode">
+                        <input class="input-btn" type="submit" value="Log ind">
+                    </form>
+                    <div class="tilmeld-link">
+                        <h4>Ny hos HOF?</h4>
+                        <!-- Content skift i HTML -->
+                        <a id="tilmeld-dig">Tilmeld dig her!</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img id="trail8" src="img/trail8.webp" alt="Trailgrafik">
+            </div>
+        </div>
+    </div>
+
+    <!-- Tilmeld content der ændres i HTML'en -->
+    <div class="signup-content">
+        <div class="form-content">
+            <h2>Tilmeld dig</h2>
+            <form class="login-form" action="errorpage.html">
+                <!-- Form content -->
+                <label class="login-label">Fornavn</label>
+                <input class="login-input" type="text" name="E-mail eller adgangskode">
+                <label class="login-label">E-mail eller brugernavn</label>
+                <input class="login-input" type="text" name="E-mail eller adgangskode">
+                <label class="login-label">Adgangskode</label>
+                <input class="login-input" type="password" name="E-mail eller adgangskode">
+                <label class="login-label">Bekræft adgangskode</label>
+                <input class="login-input" type="password" name="Adgangskode">
+                <input class="input-btn" type="submit" value="Tilmeld dig">
+            </form>
+            <div class="tilmeld-link">
+                <h4>Har du allerede en konto?</h4>
+                <a id="login">Logind her!</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Booking | Nyt HTML content til FAQ'en -->
+    <div class="faq-q-booking">
+        <details>
+            <summary>
+                Kan jeg afbestille en booking?
+            </summary>
+            <p>Ja, du kan afbestille en booking via vores hjemmeside. Afbud til træning skal ske senest 3 timer før
+                træningsstart.
+            </p>
+        </details>
+        <details>
+            <summary>
+                Hvad gør jeg, hvis jeg har problemer med at booke online?
+            </summary>
+            <p>Kontrollér din internetforbindelse og prøv en anden browser. Kontakt os via telefon, hvis problemet
+                fortsætter.
+            </p>
+        </details>
+        <details>
+            <summary>
+                Er der en venteliste til et populært hold?
+            </summary>
+            <p>Ja, du kan tilmelde dig ventelisten, hvis et hold er fuldt booket. Du vil blive informeret, hvis en plads
+                bliver ledig.
+            </p>
+        </details>
+        <details>
+            <summary>
+                Hvordan booker jeg en træningstime eller et hold?
+            </summary>
+            <p>Du kan booke online via vores hjemmeside, ringe til os, eller besøge os personligt.
+            </p>
+        </details>
+    </div>
+
+    <!-- Events | Nyt HTML content til FAQ'en -->
+    <div class="faq-q-events">
+        <details>
+            <summary>
+                Hvilke typer events afholder I?
+            </summary>
+            <p>Vi afholder workshops, fitness udfordringer og sociale arrangementer.</p>
+        </details>
+        <details>
+            <summary>
+                Hvordan tilmelder jeg mig et event?
+            </summary>
+            <p>Tilmeld dig via vores hjemmeside eller gennem vores sociale medier.</p>
+        </details>
+        <details>
+            <summary>
+                Er der ekstra omkostninger for at deltage i events?
+            </summary>
+            <p>Nogle events er gratis, mens andre kan have en ekstra omkostning. Tjek event beskrivelsen for detaljer.
+            </p>
+        </details>
+        <details>
+            <summary>
+                Kan jeg invitere ikke-medlemmer til events?
+            </summary>
+            <p>Ja, ikke-medlemmer kan deltage i visse events. Tjek event beskrivelsen for specifikke regler.
+            </p>
+        </details>
+    </div>
+
+    <!-- Events | Nyt HTML content til FAQ'en -->
+    <div class="faq-q-om">
+        <details>
+            <summary>
+                Hvem er vi?
+            </summary>
+            <p>Holm Outdoor Fitness er mere end bare træning - det er et fællesskab, der guider dig mod en sundere og
+                sjovere livsstil. Hos os finder du et væld af forskellige træningsformer, der ikke kun styrker din krop,
+                men også forbedrer dit mentale velvære.
+            </p>
+        </details>
+        <details>
+            <summary>
+                Hvor er I beliggende?
+            </summary>
+            <p>Vadstedvej 21, Oksenvad, 6560 Sommersted</p>
+        </details>
+        <details>
+            <summary>
+                Hvad er jeres åbningstider?
+            </summary>
+            <p>Du kan tjekke vores hold for at se åbningstiderne.
+            </p>
+        </details>
+        <details>
+            <summary>
+                Hvordan kontakter jeg jer?
+            </summary>
+            <p>Du kan kontakte os via telefon på 53806048 , e-mail på holmoutdoorfitness@outlook.com, eller besøge på
+                Vadstedvej 21, Oksenvad, 6560 Sommersted.
+            </p>
+        </details>
+    </div>
+</body>
+
+</html>

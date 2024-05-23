@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Sidebeskrivelse -->
+    <meta name="description" content="Fejlside">
+    <title>Error page</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="img/logo.png">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="scripts/loginModal.js" defer></script>
+    <script src="scripts/navbar.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap" rel="stylesheet">
+    <link
+        href="https://api.fontshare.com/v2/css?f=bevellier@100,101,200,201,300,301,400,401,500,501,600,601,700,701,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <!-- Mobilnavigation | Fullscreen sidebar med toggle -->
+        <nav>
+            <div class="mobile-menu">
+                <div id="main-nav" class="overlay">
+                    <div class="navtop">
+                        <img class="inner-logo" src="img/logo.webp" alt="Logo">
+                        <div class="close-menu">
+                            <img class="profile-icon2" src="img/profilikon.png" alt="Profilikon">
+                            <a href="#"><img class="closebtn" src="img/closed.png" alt="Burgerknap"></a>
+                        </div>
+                    </div>
+                    <!-- Yderste menu med overordnede menupunkter -->
+                    <div class="overlay-content">
+                        <a id="ht-btn" href="#">Holdtræning &#8599;</a>
+                        <a href="errorpage.html">Personlig træning</a>
+                        <a href="booking.html">Booking</a>
+                        <a href="errorpage.html">Events</a>
+                        <a id="om-btn" href="#">Om HOF &#8599;</a>
+                        <hr class="line">
+                    </div>
+                </div>
+                <!-- Første dropdownmenu -->
+                <div id="ht-nav" class="overlay">
+                    <div class="navtop">
+                        <img class="inner-logo" src="img/logo.webp" alt="Logo">
+                        <a href="#" id="back-btn2" class="closebtn">&larr;</a>
+                    </div>
+                    <div class="overlay-content">
+                        <a href="holdtraening.html">TRX-suspension training</a>
+                        <a href="holdtraening.html">CrossGym</a>
+                        <a href="holdtraening.html">Kvindepower</a>
+                        <a href="holdtraening.html">Fyraftenstræning</a>
+                        <a href="holdtraening.html">Fitnessrun</a>
+                        <hr class="line">
+                    </div>
+                </div>
+                <!-- Anden dropdownmenu -->
+                <div id="om-nav" class="overlay">
+                    <div class="navtop">
+                        <img class="inner-logo" src="img/logo.webp" alt="Logo">
+                        <a href="#" id="back-btn3" class="closebtn">&larr;</a>
+                    </div>
+                    <div class="overlay-content">
+                        <a href="instruktoerer.html">Instruktører</a>
+                        <a href="errorpage.html">Kontakt</a>
+                        <a href="errorpage.html">Anbefalinger</a>
+                        <a href="errorpage.html">Værdier</a>
+                        <hr class="line">
+                    </div>
+                </div>
+                <!-- Den synlige header på mobilstørrelse -->
+                <div class="mobile-header">
+                    <a href="index.html"><img class="logo" src="img/logo.webp" alt="Logo"></a>
+                    <div class="open-menu">
+                        <a href="#"><img id="profile-icon" src="img/profilikon.webp" alt="Profilikon"></a>
+                        <span class="burger-btn"><img src="img/open.webp" alt="Burgerknap"></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Desktopnavigation -->
+        <nav class="desktop-header">
+            <a href="index.html"><img class="logo" src="img/logo.webp" alt="Logo"></a>
+            <!-- Første dropdownpunkt -->
+            <div class="desktop-menu">
+                <div class="dropdown">
+                    <a class="dropbtn">Holdtræning</a>
+                    <div class="dropdown-content">
+                        <a href="holdtraening.html">TRX-suspension training</a>
+                        <a href="holdtraening.html">CrossGym</a>
+                        <a href="holdtraening.html">Kvindepower</a>
+                        <a href="holdtraening.html">Fyraftenstræning</a>
+                        <a href="holdtraening.html">Fitnessrun</a>
+                    </div>
+                </div>
+                <a href="errorpage.html">Personlig træning</a>
+                <a href="booking.html">Booking</a>
+                <a href="errorpage.html">Events</a>
+                <!-- Andet dropdownpunkt -->
+                <div class="dropdown">
+                    <a class="dropbtn">Om HOF</a>
+                    <div class="dropdown-content">
+                        <a href="instruktoerer.html">Instruktører</a>
+                        <a href="errorpage.html">Kontakt</a>
+                        <a href="errorpage.html">Anbefalinger</a>
+                        <a href="errorpage.html">Værdier</a>
+                    </div>
+                </div>
+                <img class="profile-icon" src="img/profilikon.webp" alt="Profile icon">
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- Sideoverskrift -->
+        <div class="error-header">
+            <h1>Ups! Pusten er gået ud</h1>
+            <h2>404</h2>
+            <img src="img/error.webp" alt="Error-banner">
+            <h3>Vi arbejder på det</h3>
+        </div>
+        <!-- Banner -->
+        <div class="error-banner">
+            <P>Prøv i stedet</P>
+        </div>
+        <!-- Videre knapper -->
+        <div class="error-buttons">
+            <a class="error-btn" href="holdtraening.html">Holdtræning</a>
+            <a class="error-btn" href="booking.html">Book træning</a>
+            <a class="error-btn" href="anbefalinger.html">Anbefalinger</a>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <div class="footer-menupunkter">
+                    <div class="footer-section">
+                        <h4>Holdtræning</h4>
+                        <ul class="footer-mobile-menu">
+                            <li><a href="holdtraening.html">TRX-suspension</a></li>
+                            <li><a href="holdtraening.html">Training</a></li>
+                            <li><a href="holdtraening.html">CrossGym</a></li>
+                            <li><a href="holdtraening.html">Kvindepower</a></li>
+                            <li><a href="holdtraening.html">Fyraftenstræning</a></li>
+                            <li><a href="holdtraening.html">FitnessRun</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4><a href="errorpage.html">Personlig træning</a></h4>
+                    </div>
+                    <div class="footer-section">
+                        <h4><a href="booking.html">Booking</a></h4>
+                    </div>
+                    <div class="footer-section">
+                        <h4><a href="errorpage.html">Events</a></h4>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Om HOF</h4>
+                        <ul class="footer-mobile-menu">
+                            <li><a href="instruktoerer.html">Instruktører</a></li>
+                            <li><a href="errorpage.html">Kontakt</a></li>
+                            <li><a href="anbefalinger.html">Anbefalinger</a></li>
+                            <li><a href="errorpage.html">Værdier</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="social">
+                    <a href="https://www.instagram.com/holmoutdoorfitness/" target="_blank"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=100063334863141" target="_blank"><i
+                            class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+            <div class="footer-right">
+                <div class="footer-section signup">
+                    <h4>Tilmeld dig</h4>
+                    <a class="btn" href="booking.html">BOOK DIN TRÆNING</a>
+                </div>
+                <div class="footer-section contact">
+                    <p>Vadstedvej 21, Oksenvad<br>6560 Sommersted<br>Tlf +45 5380 6048<br>holmoutdoorfitness@outlook.com
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal-btn"></div>
+    <div class="login-modal">
+        <div class="login-modal-content">
+            <div>
+                <img id="trail7" src="img/trail7.webp" alt="">
+                <div class="cross">
+                    <div class="horizontal"></div>
+                    <div class="vertical"></div>
+                </div>
+            </div>
+            <div class="login-content current-container">
+                <div class="form-content">
+                    <h2>Log ind</h2>
+                    <!-- Label form -->
+                    <form class="login-form" action="errorpage.html">
+                        <label class="login-label">E-mail eller brugernavn</label>
+                        <input class="login-input" type="text" name="E-mail eller adgangskode">
+                        <label class="login-label">Adgangskode</label>
+                        <input class="login-input" type="password" name="Adgangskode">
+                        <input class="input-btn" type="submit" value="Log ind">
+                    </form>
+                    <div class="tilmeld-link">
+                        <h4>Ny hos HOF?</h4>
+                        <!-- Content skift i HTML -->
+                        <a id="tilmeld-dig">Tilmeld dig her!</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img id="trail8" src="img/trail8.webp" alt="Trailgrafik">
+            </div>
+        </div>
+    </div>
+
+    <!-- Tilmeld content der ændres i HTML'en -->
+    <div class="signup-content">
+        <div class="form-content">
+            <h2>Tilmeld dig</h2>
+            <form class="login-form" action="errorpage.html">
+                <!-- Form content -->
+                <label class="login-label">Fornavn</label>
+                <input class="login-input" type="text" name="E-mail eller adgangskode">
+                <label class="login-label">E-mail eller brugernavn</label>
+                <input class="login-input" type="text" name="E-mail eller adgangskode">
+                <label class="login-label">Adgangskode</label>
+                <input class="login-input" type="password" name="E-mail eller adgangskode">
+                <label class="login-label">Bekræft adgangskode</label>
+                <input class="login-input" type="password" name="Adgangskode">
+                <input class="input-btn" type="submit" value="Tilmeld dig">
+            </form>
+            <div class="tilmeld-link">
+                <h4>Har du allerede en konto?</h4>
+                <a id="login">Logind her!</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

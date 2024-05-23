@@ -1,0 +1,2305 @@
+/* Reset styling for at sikre et 'rent' udgangspunkt. */
+/* Margin og padding = 0, så man har bedre kontrol over sit layout. */
+/* Border box, så browser også tager hensyn til borders osv. så de ikke breaker */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* Max width 100% sørger for at billedet ikke overflower parent containeren */
+/* Italic font style giver alt-teksten en kursiv effekt */
+/* Cover er anvendt, da der ikke er behov for andet */
+
+img {
+    max-width: 100%;
+    font-style: italic;
+    background-size: cover;
+}
+
+input,
+label,
+button {
+    outline: none;
+    border: none;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+    color: var(--main-text-clr);
+    font-weight: 100;
+    cursor: pointer;
+}
+
+strong {
+    font-weight: 500;
+}
+
+:root {
+    /* Farvevariabler */
+    /* Anvendt for at skabe consitency */
+    --bg-clr: #EAE4DA;
+    --main-clr: #647F62;
+    --secondary-clr: #F4B974;
+    --accent-clr: #A32C38;
+
+    --main-text-clr: #000;
+    --secondary-text-clr: #fff;
+
+    /* Fonts */
+    --header-font: 'Antonio', sans-serif;
+    --text-font: 'Bevellier', sans-serif;
+
+    /* Font størrelser */
+    --page-title: 6rem;
+    --h1: 4.5rem;
+    --h2: 3.5rem;
+    --broed: 1.5rem;
+    --hold-header: 5rem;
+
+    /* Marginer */
+    --side-margin: 6rem 4rem;
+}
+
+/* Generel styling af elementer, knapper, body og overskrifter */
+
+body {
+    background-color: var(--bg-clr);
+    font-family: var(--text-font);
+}
+
+p {
+    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--header-font);
+    font-weight: 400;
+}
+
+button,
+a {
+    font-family: var(--header-font);
+}
+
+.btn {
+    color: var(--secondary-text-clr);
+    /* Bredde sat for at sikre en bestemt størrelse */
+    width: 170px;
+    border: var(--secondary-clr) 3px solid;
+    border-radius: 32px;
+    padding: 0.7rem 0;
+
+    z-index: 1;
+
+    /* Fontændringer i knappen */
+    font-family: 'Antonio', sans-serif;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+
+    /* Indre layout */
+    display: flex;
+    justify-content: center;
+
+    /* Fylde effekt, som eksekveres på hover vha. linear-gradient */
+    background-image: linear-gradient(to right, var(--secondary-clr) 50%, transparent 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: background-position 0.4s, color 0.5s;
+}
+
+/* Styling af de solide knapper med baggrundsfarve */
+.solid-btn {
+    background-color: var(--secondary-clr);
+    border: none;
+    color: var(--secondary-text-clr);
+    width: 150px;
+    border-radius: 12px;
+    padding: 0.7rem 0;
+
+    font-family: 'Antonio', sans-serif;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+
+    display: flex;
+    justify-content: center;
+}
+
+/* Eksekvering af hovereffekt */
+.btn:hover {
+    background-position: left bottom;
+    color: var(--main-text-clr);
+}
+
+a:active {
+    scale: 1.05;
+}
+
+.btn-black {
+    color: var(--main-text-clr);
+}
+
+/* Mobil menu */
+.mobile-menu {
+    /* Mobil header i display none tilstand for at holde den lukket, frem til det rette breakpoint */
+    display: none;
+}
+
+/* Desktop header */
+
+/* Opsat med flexbox */
+.desktop-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 2rem 0 2rem;
+}
+
+.desktop-menu {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.logo {
+    max-width: 150px;
+}
+
+/* Knap til dropdownmenu */
+.dropbtn {
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+/* Hovereffekt på links */
+.dropbtn:hover,
+.desktop-menu a:hover {
+    color: grey;
+}
+
+.desktop-menu a {
+    font-size: 1.3rem;
+    transition: all 0.4s;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.dropdown {
+    position: relative;
+    display: block;
+}
+
+/* Selve dropdown boksen */
+/* Skubbet lidt tilbage med translate grundet overlap */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    transform: translateX(-80px);
+    background-color: var(--secondary-text-clr);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    border-radius: 4px;
+}
+
+.dropdown-content a {
+    padding: 1rem;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Forside */
+
+/* Hero sektion */
+.front-hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Hero video */
+/* Stylet med filter for at spare på mb størrelsen på videoerne */
+#banner-video {
+    max-width: 100%;
+    filter: sepia(10%) saturate(70%) brightness(80%);
+}
+
+/* Hero overskrift - Skubbet frem med translate for at skabe overlap effekt. Dertil også sat z-index for at få den foran videoen  */
+.front-hero-header {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 3.5rem;
+    transform: translateY(54px);
+    z-index: 99;
+}
+
+#front-hero-header-h1-2 {
+    color: var(--secondary-text-clr);
+    background-color: var(--main-clr);
+    width: fit-content;
+    margin: auto;
+}
+
+.front-action {
+    margin: var(--side-margin);
+}
+
+.front-action h1 {
+    font-size: 3.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+
+/* Sektion med tilbudskatalog */
+
+/* Sektion opstillet vha. flexbox + en god kombination af gap & flex-direction */
+
+.front-muligheder {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+/* Kontrast skruet ned på disse billeder */
+.front-muligheder img {
+    filter: contrast(80%);
+}
+
+.front-personlig,
+.front-hold {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.front-personlig h3,
+.front-hold h3 {
+    background-color: var(--accent-clr);
+    color: var(--secondary-text-clr);
+    font-size: 2rem;
+
+    margin: 4rem 0 2rem 0;
+    padding: 0.5rem;
+
+    border-radius: 12px;
+    text-transform: uppercase;
+}
+
+.front-call-to-action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 3rem;
+}
+
+.front-call-to-action h3 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 400;
+
+    margin: 2rem;
+}
+
+/* Promo sektion med interview */
+/* Sektion opstillet vha. flexbox + en god kombination af gap & flex-direction */
+.front-promo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: var(--main-text-clr) solid 1px;
+    margin: var(--side-margin);
+}
+
+.front-promo a {
+    margin-top: 3rem;
+}
+
+.front-promo-header h1 {
+    font-size: 3.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 1.5rem 0;
+}
+
+.front-promo-header p {
+    font-size: 1.7rem;
+    font-weight: 300;
+}
+
+.front-promo-video {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 3rem 0;
+}
+
+.front-promo h1 {
+    align-items: flex-start;
+}
+
+/* Mere filter på video */
+#promo-video {
+    max-width: 90%;
+    border-radius: 12px;
+    filter: sepia(10%) saturate(80%);
+}
+
+/* Interaktiv sektion, hvor der klikkes rundt på kroppen */
+/* Opsat med flexbox. Igen anvendt flex-direction & gap */
+
+.interactive-infographic {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+
+    margin: var(--side-margin);
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 3rem;
+}
+
+.info img {
+    max-width: 600px;
+    margin-top: 2rem;
+}
+
+.info p {
+    margin-right: 6rem;
+}
+
+#title-info {
+    margin: 0;
+    font-size: 4rem;
+}
+
+.interaction {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.interaction p {
+    background-color: var(--secondary-clr);
+    color: var(--secondary-text-clr);
+    width: fit-content;
+    text-align: center;
+    border-radius: 12px;
+}
+
+.interaction img {
+    max-width: 300px;
+}
+
+/* Styling af area dots fra HTML <map> */
+.area-dots {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(163, 44, 56, 0.6);
+    transform: translate(0, -820px);
+    transition: all 0.3s;
+}
+
+.area-dots:hover {
+    background-color: var(--accent-clr);
+}
+
+map {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Styling til skift */
+.info-skift {
+    border-radius: 12px;
+    opacity: 1;
+}
+
+/* Klasser der aktiveres med add classList, og kører animationen */
+.fade-out {
+    animation: fadeOut 0.5s forwards;
+}
+
+.fade-in {
+    animation: fadeIn 0.5s forwards;
+}
+
+/* Animation */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translate(0);
+    }
+/* Effekt, så elementet skyder fra den nuværende position i DOM til -100% */
+    to {
+        opacity: 0;
+        transform: translate(-100%);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-100%);
+    }
+/* Effekt, så elementet skyder fra -100% i DOM tilbage til dens originale plads */
+    to {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+
+
+/* Hvert enkel dot placeret inde i billedcontaineren vha. translate. 
+Dette var nødvendigt, da stylingen af dots'ne ikke placerede dem hvor det var nødvendigt.
+Hvert enkel dot er dog stadig responsiv, og funktionen fungerer som den skal */
+#hoved {
+    transform: translate(70px, -820px);
+}
+
+#hjerte {
+    transform: translate(80px, -640px);
+}
+
+#lunge {
+    transform: translate(20px, -600px);
+}
+
+#haand {
+    transform: translate(-140px, -450px);
+}
+
+#laar {
+    transform: translate(-10px, -300px);
+}
+
+#fod {
+    transform: translate(-100px, -80px);
+}
+
+/* FAQ-sektion */
+/* Opsat med flexbox */
+
+.faq {
+    margin: var(--side-margin);
+}
+
+.faq h1 {
+    font-size: var(--h1);
+    margin-bottom: 4rem;
+    text-transform: uppercase;
+}
+
+.faq-box {
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+    margin: 0 2rem;
+}
+
+.faq-q {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Display none af de sektioner der skal udskifte content på siden, så det kun popper op ved onclick-event */
+.faq-q-booking,
+.faq-q-events,
+.faq-q-om {
+    display: none;
+}
+
+.faq-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.faq-btn {
+    background-color: var(--bg-clr);
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 1.5rem;
+    text-align: left;
+    transition: all 0.5s ease;
+}
+
+.faq-btn:hover {
+    color: var(--main-text-clr);
+}
+
+/* Klasser der aktiveres i javascript og kører nedenstående keyframes */
+.acc-fade-out {
+    animation: accFadeOut 1s forwards;
+}
+
+.acc-fade-in {
+    animation: accFadeIn 1s forwards;
+}
+
+/* Keyframes anvendt til Accordion - Fungerer i sammenspil med javascript */
+@keyframes accFadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes accFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Generel styling af details & summary */
+details {
+    border-bottom: solid 0.5px var(--main-text-clr);
+    font-size: 1.8rem;
+    font-family: var(--header-font);
+    font-weight: 200;
+    text-align: right;
+    padding-bottom: 2rem;
+    max-width: 600px;
+    opacity: 1;
+}
+
+/* Ændrer stiltypen på åbneknappen */
+summary {
+    list-style-type: '+';
+    padding: 1rem 0;
+}
+
+summary::marker {
+    font-size: 2rem;
+}
+
+/* Ændrer stiltypen på lukkeknappen */
+details[open]>summary {
+    list-style-type: '-';
+}
+
+details>p {
+    font-size: 1.2rem;
+    text-transform: none;
+    font-family: var(--text-font);
+    font-weight: 300;
+}
+
+
+/* Holdtræning */
+
+/* Hero sektion */
+/* Denne side af sektionen bruger også flexbox */
+.hold-hero {
+    margin: var(--side-margin);
+}
+
+/* Overordnede container af hero section.  */
+.hold-pagetitle {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: var(--h1);
+}
+
+/* Styrer layout vha. flex-direction */
+.hold-inclusive {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+
+    margin: 10rem 2rem 2rem 2rem;
+}
+
+.hold-inclusive img {
+    border-radius: 8px;
+    width: 400px;
+}
+
+.hold-inclusive h2 {
+    padding: 2rem 0;
+    font-size: var(--h1);
+    text-transform: uppercase;
+}
+
+.hold-inclusive p {
+    font-size: 1.5rem;
+}
+
+/* Generel styling for overskriften på de næste sektioner af holdsiden */
+.hold-header {
+    font-size: var(--hold-header);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+
+    background-color: var(--secondary-clr);
+    color: var(--main-text-clr);
+    /* Anvendt fit content, da det er nemmere end at skulle bestemme en specifik bredde */
+    max-width: fit-content;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Centrering, med undtagelse af margen i bunden af title */
+    margin: auto auto 6rem auto;
+    padding: 0 5px;
+}
+
+.hold-info {
+    color: var(--secondary-text-clr);
+    margin: 0 2rem;
+    max-width: 100%;
+}
+
+.trx-space {
+    padding-top: 6rem;
+}
+
+.hold-info p {
+    padding-bottom: 2rem;
+}
+
+/* TRX container med 100% for at få den rette baggrundsfarve */
+.hold-trx {
+    background-color: var(--main-clr);
+    padding-bottom: 6rem;
+    width: 100%;
+}
+
+.trx {
+    display: flex;
+    flex-direction: row;
+}
+
+.trx img {
+    margin-left: 2rem;
+    border-radius: 12px;
+}
+
+/* CrossGyn */
+.crossgym {
+    display: flex;
+    flex-direction: row;    
+}
+
+.second-header {
+    margin-left: 0;
+}
+
+.crossgym img {
+    margin: 0 2rem;
+    border-radius: 12px;
+}
+
+/* Ekstra klasse til nogle af overskrifterne for at ændre farven */
+.p-cross {
+    color: var(--main-text-clr);
+}
+
+/* Ekstra klasse til nogle af overskrifterne for at ændre farven */
+.p-cross2 {
+    display: flex;
+    color: var(--main-text-clr);
+}
+
+/* Kvindepower container med 100% for at få den rette baggrundsfarve */
+.hold-kp {
+    background-color: var(--main-clr);
+    width: 100%;
+    display: flex;
+}
+
+.kp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.kp img {
+    margin: 0 2rem;
+    border-radius: 12px;
+}
+
+/* Fitnessrun */
+.fr {
+    display: flex;
+    flex-direction: row;
+}
+
+.fr img {
+    margin: 0 2rem;
+    border-radius: 12px;
+}
+
+/* Positionerer elementet relativt 10% fra venstre */
+/* Det er derfor også nødvenigt at sætte position til noget. Ellers virker det ikke */
+#trail4 {
+    left: 10%;
+    position: relative;
+}
+
+#trail5 {
+    /* Flyder elementer til højre */
+    float: right;
+}
+
+/* Fyraftenstræningscontainer */
+.hold-ft {
+    background-color: var(--main-clr);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.ft {
+    display: flex;
+    align-items: center;
+}
+
+.ft img {
+    margin: 0 2rem;
+    border-radius: 12px;
+}
+
+#trail6 {
+    left: 10%;
+    position: relative;
+}
+
+
+/* Bookingside */
+
+/* Skjuler det ugeskift der skal ske vha. onclick */
+.booking-calendar-uge23 {
+    display: none;
+    z-index: 999;
+}
+
+.booking-billetter {
+    margin: 3rem;
+}
+
+.booking {
+    margin-left: 3rem;
+}
+
+/* Flex layout for billetter sektionen med plads mellem elementerne og centreret justering */
+.billetter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 6rem 0;
+}
+
+/* Flex kolonnelayout for cards med centreret justering og mellemrum mellem dem */
+.cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    max-width: 280px;
+    text-align: center;
+}
+
+.cards h4 {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.cards img {
+    max-height: 160px;
+}
+
+/* Flex flex-direction for booking hold sektion */
+.booking-hold {
+    margin: var(--side-margin);
+    display: flex;
+    flex-direction: column;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.7);
+}
+
+.booking-header-box {
+    display: flex;
+    align-items: center;
+}
+
+/* Collabsible styling */
+.collapsible {
+    background-color: rgba(244, 185, 116, 0.6);
+    color: var(--main-text-clr);
+    cursor: pointer;
+    padding: 1rem;
+    width: 100%;
+    text-align: left;
+    font-size: var(--broed);
+}
+
+/* Aktiv tilstand for collabsible*/
+.active {
+    background-color: rgba(244, 185, 116, 0.6);
+}
+
+/* Pileikon for collabsible før */
+.collapsible:after {
+    content: "\25B6";
+    color: rgba(0, 0, 0, 0.6);
+    float: right;
+    margin-left: 5px;
+}
+
+/* Pileikon for collabsible efter */
+.active:after {
+    content: "\25BC";
+}
+
+.col-content {
+    padding: 0 1rem;
+    margin: 1rem 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: rgba(244, 185, 116, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: var(--header-font);
+}
+
+.hold-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.hold-trainer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.hold-trainer p {
+    font-weight: 200;
+    font-size: 1rem;
+}
+
+.col-content h4 {
+    font-size: 1.5rem;
+}
+
+.booking-overview {
+    margin: var(--side-margin);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.booking-sorting {
+    display: flex;
+}
+
+.booking-date {
+    margin-right: 2rem;
+    font-size: var(--broed);
+}
+
+.booking-sort-btn {
+    display: flex;
+    gap: 12px;
+}
+
+.filter-btn {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+
+/* Styling for booking knap */
+.booking-btn {
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--secondary-clr);
+    padding: 0 1.5rem;
+    font-size: 1.2rem;
+}
+
+.booking-btn img {
+    max-width: 20px;
+}
+
+.today-btn {
+    background-color: rgba(244, 185, 116, 0.3);
+    max-width: 85px;
+    height: 35px;
+}
+
+/* Styling for frem og tilbage knapper */
+#forward-btn,
+#back-btn {
+    font-size: 1.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 55px;
+    height: 35px;
+}
+
+.calendar-btn {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    max-width: 130px;
+    height: 35px;
+}
+
+.date {
+    font-size: var(--h2);
+    margin: var(--side-margin);
+}
+
+/* Anvendelse af grid til at justere placeringen af de enkelte kort i layoutet */
+.booking-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin: var(--side-margin);
+    border-bottom: solid 1px rgba(0, 0, 0, 0.7);
+}
+
+.card {
+    width: 350px;
+    border-radius: 12px;
+    background-color: rgba(244, 185, 116, 0.3);
+    margin: 3rem 0;
+    min-height: 420px;
+}
+
+.card-day {
+    display: flex;
+    height: 120px;
+    border-bottom: solid var(--main-text-clr) 2px;
+    margin: 1rem;
+    font-size: var(--broed);
+}
+
+.card-date {
+    display: flex;
+    align-items: flex-end;
+    height: 70px;
+    margin: 1rem;
+    font-size: var(--broed);
+}
+
+.hold-cards {
+    background-color: rgba(244, 185, 116, 0.7);
+    margin: 1rem 1rem 2rem 1rem;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.card-hold-info {
+    margin: 0 1rem;
+}
+
+/* Flex layout for kort træner sektion med nowrap */
+.card-trainer {
+    flex-wrap: nowrap;
+    flex-direction: row;
+    margin: 0 1rem;
+}
+
+.card-trainer p {
+    font-size: 1rem;
+}
+
+/* Skjult login modal */
+.login-modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    z-index: 9999;
+    /* Baggrundsfarve med lav opacity, så man får en effekt af, at
+    det indre modal ligger ovenpå det yderste */
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.1);
+    animation-name: modalAnimation;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+/* Keyframes for modal animation fra bund til top */
+@keyframes modalAnimation {
+    from {
+        bottom: -1000px;
+    }
+
+    to {
+        bottom: 0;
+    }
+}
+
+/* Indre modal content */
+.login-modal-content {
+    position: relative;
+    background-color: #FCECD9;
+    margin: auto;
+    width: 95%;
+    height: 90%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 12px;
+
+    animation-name: modalAnimation;
+    animation-duration: 1s;
+}
+
+.login-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Content trukket en smule tilbage for at undgå overflow - 
+    da der er overflow: hidden i dens parent */
+    transform: translateY(-80px);
+}
+
+/* Html content gemt væk for senere at blive hentet ved onclick*/
+.signup-content {
+    display: none;
+}
+
+#trail7 {
+    max-width: 300px;
+}
+
+#trail8 {
+    float: right;
+    max-width: 300px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-content h2 {
+    font-size: 2rem;
+}
+
+.login-label {
+    font-family: var(--header-font);
+    font-weight: 100;
+    margin-top: 1rem;
+}
+
+.login-input {
+    padding: 1rem;
+    border-radius: 6px;
+    width: 300px;
+}
+
+.input-btn {
+    background-color: var(--secondary-clr);
+    width: 120px;
+    border-radius: 32px;
+    padding: 0.7rem 0;
+    margin-top: 1rem;
+
+    font-family: var(--header-font);
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.tilmeld-link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: rgba(0, 0, 0, 0.6);
+
+    margin-top: 2rem;
+    padding-top: 1rem;
+
+    border-top: var(--main-text-clr) solid 1px;
+}
+
+/* Lukkeknap for modal */
+/* Kunne have anvendt unicodes eller image, men ville gerne have muligheden 
+for at kunne manipulere efter behov*/
+.cross {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    transform: rotate(45deg);
+    float: right;
+    top: 20px;
+    right: 20px;
+    transition: all ease 0.3s;
+}
+
+.cross:active {
+    scale: 1.1;
+}
+
+.cross:hover {
+    transform: rotate(180deg);
+}
+
+.cross .horizontal,
+.cross .vertical {
+    position: absolute;
+    background-color: var(--main-text-clr);
+}
+
+/* Præcis placering af vandrette linje */
+.cross .horizontal {
+    width: 100%;
+    height: 1.5px;
+    top: 48%;
+}
+
+/* Præcis placering af lodrette linje */
+.cross .vertical {
+    width: 1.5px;
+    height: 100%;
+    left: 48%;
+}
+
+/* Booking modal, samme som login */
+.booking-modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.1);
+
+    animation-name: modalAnimation;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.booking-modal-content {
+    position: relative;
+    background-color: var(--main-clr);
+    margin: auto;
+    max-width: 70%;
+    height: 90%;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    border-radius: 12px;
+
+    animation-name: modalAnimation;
+    animation-duration: 1s;
+}
+
+#booking-close {
+    position: relative;
+    left: 95%;
+}
+
+.tilmelding {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-clr);
+    width: 500px;
+    min-height: 300px;
+    margin: auto;
+    padding: 2rem;
+    border-radius: 12px;
+
+}
+
+/* Bookingbekræftelse der erstatter noget content i booking modalet */
+/* Opsat med flex */
+.tilmelding-check {
+    display: none;
+    flex-direction: column;
+    background-color: var(--bg-clr);
+    min-height: 300px;
+    width: 500px;
+    margin: auto;
+    padding: 2rem;
+    border-radius: 12px;
+}
+
+/* Skaleret op for effekt */
+#checkmark {
+    scale: 2.2;
+}
+
+.tilmelding p {
+    font-size: 1rem;
+}
+
+.tilmelding img {
+    max-width: 30px;
+}
+
+
+.tilmelding-header {
+    margin-bottom: 2rem;
+}
+
+.tilmelding-tid {
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 1rem;
+}
+
+.tilmelding-instructor {
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: solid 0.5px var(--main-text-clr);
+}
+
+.tilmeldte {
+    display: flex;
+    gap: 3rem;
+}
+
+.tilmelding-book {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 70%;
+    margin: auto;
+}
+
+.tilmelding-book p {
+    color: var(--secondary-text-clr);
+    text-align: center;
+}
+
+.tilmelding-book a {
+    width: 70%;
+    margin-top: 1rem;
+}
+
+#back-booking {
+    display: none;
+}
+
+/* Error page */
+
+
+/* Error header */
+.error-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.error-header h1 {
+    font-size: 3rem;
+    margin-top: 6rem;
+}
+
+.error-header h2 {
+    font-size: 6rem;
+    margin: 2rem;
+}
+
+.error-header h3 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-top: 3rem;
+}
+
+.error-header img {
+    max-width: 70%;
+    height: auto;
+}
+
+/* Error banner */
+.error-banner {
+    width: 100%;
+    background-color: rgba(100, 127, 98, 0.7);
+
+    display: flex;
+    justify-content: center;
+
+    margin: 5rem 0;
+    padding: 2rem 0;
+}
+
+.error-banner p {
+    font-size: 2rem;
+    font-weight: 300;
+    font-family: var(--header-font);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+/* Errorknap */
+.error-btn {
+    max-width: 12rem;
+    text-decoration: none;
+    background-color: var(--secondary-clr);
+    padding: 1rem 1.5rem;
+    border-radius: 32px;
+
+    display: flex;
+    justify-content: center;
+
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.error-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    margin-bottom: 4rem;
+}
+
+
+/* Anbefalingsside */
+
+/* Hovedtitel */
+.page-title {
+    margin: var(--side-margin);
+    padding: 0 0.5rem;
+
+    font-size: var(--page-title);
+    text-transform: uppercase;
+
+    background-color: var(--main-clr);
+    color: var(--secondary-text-clr);
+
+    width: fit-content;
+}
+
+.page-banner {
+    background-color: var(--main-clr);
+    color: var(--secondary-text-clr);
+    width: 100%;
+    padding: 1rem 4rem;
+
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.anbefalinger {
+    margin: var(--side-margin);
+
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.anbefalinger-box {
+    background-color: rgba(244, 185, 116, 0.2);
+    max-width: 600px;
+    padding: 2rem;
+}
+
+.anbefalinger-box h4 {
+    float: right;
+}
+
+.anbefalinger-citat {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* Instruktørside */
+
+.instructor {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin: var(--side-margin);
+}
+
+.instructor-header {
+    margin: 4rem 0;
+}
+
+.credentials {
+    display: flex;
+    flex-direction: row;
+}
+
+.credentials img {
+    border-radius: 12px;
+    max-width: 370px;
+    margin: 0 2rem;
+}
+
+.credentials li {
+    padding: 0.2rem 0;
+    font-weight: 300;
+    font-size: 1.3rem;
+}
+
+.credentials p {
+    margin-bottom: 2.5rem;
+}
+
+.credentials>div {
+    margin: 0 3rem;
+}
+
+.instructor-icon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+    padding: 0 3rem;
+    border-radius: 12px;
+
+    background-color: var(--main-clr);
+    color: var(--secondary-text-clr);
+}
+
+.instructor-icon img {
+    margin: 2rem;
+    max-width: 120px;
+}
+
+/* Footer*/
+
+footer {
+    background-color: var(--main-clr);
+    color: #ffffff;
+    padding: 20px;
+}
+
+.footer-container {
+    /* Flexbox layout anvendt */
+    display: flex;
+    /* Placerer elementerne fra venstre mod højre */
+    flex-direction: row;
+    /* Fordeler pladsen mellem børneelementerne */
+    justify-content: space-between;
+}
+
+.footer-container a {
+    color: var(--secondary-text-clr);
+}
+
+.footer-left {
+    display: flex;
+    /* Placerer indhold i kolonner fra top til bund */
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.footer-menupunkter {
+    display: flex;
+    /* Indhold placeret i række fra venstre mod højre */
+    flex-direction: row;
+    /* Sætter afstand mellem børneelementerne */
+    gap: 50px;
+}
+
+.footer-section h4 {
+    /* Skriftstørrelse for overskrifter */
+    font-size: 1.5rem;
+    /* Sætter bundmargin for overskrifter */
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    /* Fjerner standard punktmarkeringer */
+    list-style: none;
+    padding: 0;
+    opacity: 0.7;
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    /* Justerer elementerne til toppen af containeren */
+    justify-content: flex-start;
+    /* Justerer elementerne til højre af containeren */
+    align-items: flex-end;
+}
+
+
+.signup {
+    display: flex;
+    /* Kolonner indhold fra top til bund */
+    flex-direction: column;
+    /* Centrerer indholdet i kolonnen vertikalt */
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+
+}
+
+.signup h4 {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+/* Styling af knap til "BLIV MEDLEM" */
+.signup button {
+    background-color: var(--main-clr);
+    color: #ffffff;
+    border: 2px solid var(--secondary-clr);
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 30px;
+    font-size: 16px;
+}
+
+/* Styling af kontaktinformation */
+.contact p {
+    /* Justeterer teksten til højre */
+    text-align: right;
+    line-height: 1.5;
+}
+
+/* Styling af SoME ikoner */
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+
+.social a {
+    color: #ffffff;
+    font-size: 60px;
+    margin: 0 10px;
+    transition: color 0.6s ease;
+}
+
+/* Hover på SoME ikoner */
+.social a:hover {
+    color: #cccccc;
+}
+
+@media screen and (max-width: 750px) {
+    /* Desktop header skjules */
+    .desktop-header {
+        display: none;
+    }
+
+    /* Mobil header */
+    .mobile-header {
+        position: relative;
+        top: 0;
+        width: 100%;
+        background-color: var(--bg-clr);
+        display: flex;
+        justify-content: space-between;
+        z-index: 9988;
+    }
+
+    .open-menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 1rem;
+        gap: 1rem;
+    }
+
+    #profile-icon {
+        max-width: 35px;
+    }
+
+    .profile-icon2 {
+        max-width: 35px;
+    }
+
+    .burger-btn {
+        max-width: 35px;
+    }
+
+    /* Tilbageknapper indre mobil header */
+    #back-btn2,
+    #back-btn3 {
+        font-size: 3rem;
+        color: var(--main-clr);
+    }
+
+    .close-menu {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .closebtn {
+        max-width: 35px;
+    }
+
+    .next-btn {
+        display: block;
+        width: 40px;
+        height: auto;
+        color: var(--main-text-clr);
+    }
+
+    .logo {
+        max-width: 100px;
+        margin: 1rem;
+    }
+
+    .inner-logo {
+        max-width: 100px;
+    }
+
+    .mobile-menu {
+        display: flex;
+    }
+
+    /* Mobil header overlay ved klik */
+    .overlay {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 9999;
+        top: 0;
+        left: 0;
+        background-color: var(--bg-clr);
+        overflow: hidden;
+        transition: all 0.3s;
+    }
+
+    .line {
+        border: rgba(0, 0, 0, 0.6) solid 0.5px;
+        /* background-color: rgba(0, 0, 0, 0.4); */
+    }
+
+    .overlay-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+
+        text-transform: uppercase;
+        padding: 1.5rem;
+    }
+
+    .navtop {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 1rem 2rem;
+    }
+
+    .overlay-content a {
+        font-size: 3rem;
+    }
+
+
+    /* Titel */
+
+    .page-title {
+        font-size: 4rem;
+        margin: 2rem auto;
+    }
+
+    /* Forside */
+    .interactive-infographic {
+        align-items: center;
+        justify-content: center;
+    }
+
+    #promo-video {
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .front-action,
+    .front-promo {
+        margin: 2rem;
+        text-align: center;
+    }
+
+    .front-call-to-action {
+        margin: 0;
+    }
+
+    .info {
+        gap: 1rem;
+        align-items: center;
+    }
+
+    #title-info {
+        font-size: 2.5rem;
+    }
+
+    .info p {
+        margin: 0;
+    }
+
+    .info img {
+        width: 350px;
+        margin: auto;
+    }
+
+    .front-hero-header {
+        font-size: 1.5rem !important;
+        transform: translateY(22px);
+    }
+
+    .front-action h1 {
+        font-size: 2rem !important;
+    }
+
+    .front-muligheder {
+        flex-direction: column;
+    }
+
+    .front-promo-header h1 {
+        font-size: 2rem;
+    }
+
+    .faq {
+        margin: 2rem;
+    }
+
+    .faq-box {
+        flex-direction: column;
+    }
+
+    .faq-buttons {
+        flex-direction: row;
+    }
+
+    summary {
+        font-size: 1.4rem;
+    }
+
+    /* Holdtræning */
+
+    .hold-header {
+        font-size: 3rem;
+    }
+
+    .trx img,
+    .crossgym img,
+    .kp img,
+    .fr img,
+    .ft img {
+        max-width: 300px !important;
+    }
+
+    /* Error page */
+
+
+    .error-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .error-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    /* Instruktørside */
+    .instructor-icon {
+        flex-direction: column-reverse;
+        gap: 0;
+    }
+
+    .instructor {
+        margin: 0 1.4rem 2rem 1.4rem;
+    }
+
+    .instructor-header {
+        font-size: 2.7rem;
+        margin: 2rem 0;
+    }
+
+    /* Anbefalingsside */
+    .anbefalinger {
+        flex-direction: column;
+        border-bottom: rgba(0, 0, 0, 0.7) solid 1px;
+        padding-bottom: 2rem;
+    }
+
+    .anbefalinger-citat h3 {
+        font-size: 1.5rem;
+    }
+
+    .page-banner h2 {
+        font-size: 2rem;
+    }
+
+    .anbefalinger {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    /* Bookingside */
+    .booking-pagetitle {
+        margin: 3rem 4rem;
+        font-size: 1rem;
+    }
+
+    .booking-header-box {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .booking-cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .booking-overview {
+        margin: 0 2rem;
+    }
+
+    .booking-hold {
+        margin: 2rem;
+    }
+
+    .billetter {
+        display: flex !important;
+        flex-direction: column;
+    }
+
+    .booking-sorting {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .booking-sort-btn {
+        flex-direction: column;
+    }
+
+    #date {
+        font-size: 2.5rem;
+        margin: 2rem;
+    }
+
+    .tilmelding {
+        max-width: 300px;
+    }
+
+    .tilmelding-book p {
+        font-size: 1rem;
+    }
+
+    #booking-close {
+        left: 92%;
+    }
+
+    /* Footer */
+
+    /* Styling for højre del af footeren */
+    /* important måtte anvendes fordi ændringerne skulle tvinges igennem */
+    .footer-right {
+        width: 100%;
+        align-items: center !important;
+        flex-direction: column !important;
+    }
+
+    .footer-menupunkter {
+        align-items: center !important;
+    }
+
+    .footer-mobile-menu {
+        flex-direction: column !important;
+    }
+
+    .footer-section {
+        flex-direction: column !important;
+    }
+
+    .signup h4 {
+        /* Mindre skriftstørrelse for overskriften */
+        font-size: 36px !important;
+    }
+
+    /* Ændrer styling for knappen */
+    .signup button {
+        /* Mindre skriftstørrelse på knappen */
+        font-size: 14px !important;
+        /* Mindre padding på knappen */
+        padding: 8px 16px !important;
+    }
+
+    /* Centrerer listeelementerne i footeren */
+    .footer-section ul {
+        text-align: center !important;
+    }
+
+    /* Centrerer afsnit i kontaktsektionen */
+    .contact p {
+        text-align: center !important;
+    }
+}
+
+@media screen and (max-width: 850px) {
+
+    /* Bookingside */
+    .booking-pagetitle {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    /* Desktop header */
+
+    .desktop-menu a {
+        font-size: 1rem;
+    }
+
+    /* Forside */
+    .interactive-infographic {
+        gap: 1rem;
+        flex-direction: column;
+    }
+
+    .info,
+    .interaction {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .front-hero-header,
+    .front-action h1,
+    .front-call-to-action h3 {
+        font-size: 2.5rem;
+    }
+
+    /* Ændring i flex-direction for at få det samlet på en kolonne */
+    .front-muligheder {
+        flex-direction: column;
+    }
+
+    .front-promo-header h1 {
+        font-size: 2rem;
+    }
+
+    .faq h1 {
+        font-size: 2.5rem;
+    }
+
+    summary {
+        font-size: 1.4rem;
+    }
+
+    /* Holdside */
+
+    .hold-inclusive {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hold-inclusive p {
+        font-size: 1.2rem;
+    }
+
+    .hold-inclusive h2 {
+        font-size: 3rem;
+    }
+
+    .trx img,
+    .crossgym img,
+    .kp img,
+    .fr img,
+    .ft img {
+        max-width: 400px;
+    }
+
+    .hold-info p {
+        font-size: 1rem;
+    }
+
+    /* Ændring i flex-direction for at få det samlet på en kolonne */
+    .hold-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hold-header {
+        margin: 2rem auto;
+    }
+
+    /* Ændring i flex-direction for at få det samlet på en kolonne */
+    .kp,
+    .crossgym {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    /* Ændring i flex-direction for at få det samlet på en kolonne */
+    .trx,
+    .ft,
+    .fr {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+    }
+
+
+    /* Instruktørside */
+    .credentials p,
+    .credentials li,
+    .instructor-icon p {
+        font-size: 1.2rem;
+    }
+
+    .credentials {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    /* Anbefalingsside */
+
+    .anbefalinger-box p {
+        font-size: 1rem;
+    }
+
+    .anbefalinger-citat h3 {
+        font-size: 2rem;
+    }
+
+    /* Bookingside */
+
+    .booking-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .card {
+        width: 300px;
+        margin: 2rem 0;
+    }
+
+    /* ændrer layoutet til grid, så det er nemmere at styre fordelingen, når der sker ændringer i viewport width */
+    .billetter {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        /* important anvendt for at tvinge ændringen frem */
+        grid-template-rows: 1fr !important;
+        justify-items: center;
+    }
+
+    .cards {
+        margin-bottom: 2rem;
+        scale: 0.9;
+    }
+
+    .tilmelding-book p {
+        font-size: 1.2rem;
+    }
+
+    .booking-modal-content {
+        max-width: 95%;
+    }
+
+    /* Footer */
+
+    .footer-container {
+        display: flex;
+        /* Ændrer indhold fra række til kolonne */
+        flex-direction: column;
+        /* Mulighed for at bruge absolut positionering */
+        position: relative;
+    }
+
+    .footer-right {
+        /* Fylder bredden af parent containeren */
+        width: 100%;
+        /* Justerer indholdet fra venstre mod højre */
+        align-items: flex-start;
+        /* Centrerer indholdet horisontalt */
+        text-align: center;
+        /* Række fra venstre mod højre i stedet for kolonne */
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .footer-left {
+        /* Ændrer rækkefølgen så containeren står øverst i footeren */
+        order: 1;
+        width: 100%;
+        text-align: center;
+        /* Gør det muligt at bruge absolut positionering */
+        position: relative;
+    }
+
+    .footer-menupunkter {
+        position: relative;
+        /* Ændrer menupunkter til kolonne i stedet for række */
+        flex-direction: column;
+        /* Laver afstand mellem børneelementerne */
+        gap: 20px;
+        align-items: flex-start;
+        margin-top: 60px;
+    }
+
+    .footer-mobile-menu {
+        display: flex;
+        /* Laver række fra højre mod venstre*/
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .footer-section {
+        display: flex;
+        /* Centrerer indholdet horisontalt */
+        justify-content: center;
+        /* Centrerer indholdet vertikalt */
+        align-items: center;
+        /* Ændrer indhold fra kolonne til række */
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .signup {
+        flex-direction: column;
+    }
+
+    .footer-section ul {
+        text-align: center;
+    }
+
+    .contact p {
+        text-align: right;
+    }
+
+    .social {
+        /* Absolut positionering for at placere SoMe ikoner i parent containeren */
+        /* Placerer ikonerne i bunden af parent containeren */
+        /* position: absolute;
+        bottom: 0;
+        right: 0; */
+        /* Placerer ikonerne til højre i parent containeren */
+    }
+
+    /* Justerer størrelsen på SoMe ikoner */
+    .social a {
+        font-size: 70px;
+        margin: 0 10px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .hold-inclusive p {
+        font-size: 1.2rem;
+    }
+
+    .hold-inclusive h2 {
+        font-size: 3rem;
+    }
+
+    .trx img,
+    .crossgym img,
+    .kp img,
+    .fr img,
+    .ft img {
+        max-width: 400px;
+    }
+
+    .hold-info p {
+        font-size: 1.2rem;
+    }
+
+    /* Ændrer margen på overordnede sektioner */
+    .trx,
+    .crossgym,
+    .kp,
+    .fr,
+    .ft {
+        margin: 4rem 0;
+    }
+
+    /* Gemmer trail væk når vi kommer ned i størrelse */
+    #trail1,
+    #trail2,
+    #trail3,
+    #trail4,
+    #trail5,
+    #trail6 {
+        display: none;
+    }
+}

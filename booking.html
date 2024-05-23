@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Sidebeskrivelse -->
+    <meta name="description"
+        content="Her findes bookingsystemet for HOF, hvor du finder forskellige muligheder, en oversigt over træningsprogrammet osv.">
+    <!-- Keywords til søgemaskine -->
+    <meta name="keywords"
+        content="styrketræning, TRX, holdtræning, holdtræning for kvinder, inspiration til holdtræning, udendørstræning">
+    <title>Booking</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="img/logo.png">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="scripts/collapsible.js" defer></script>
+    <script src="scripts/loginModal.js" defer></script>
+    <script src="scripts/bookingModal.js" defer></script>
+    <script src="scripts/loginChange.js" defer></script>
+    <script src="scripts/bookingSort.js" defer></script>
+    <script src="scripts/navbar.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap" rel="stylesheet">
+    <link
+        href="https://api.fontshare.com/v2/css?f=bevellier@100,101,200,201,300,301,400,401,500,501,600,601,700,701,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <!-- Mobilnavigation | Fullscreen sidebar med toggle -->
+        <nav>
+            <div class="mobile-menu">
+                <div id="main-nav" class="overlay">
+                    <div class="navtop">
+                        <img class="inner-logo" src="img/logo.webp" alt="Logo">
+                        <div class="close-menu">
+                            <img class="profile-icon2" src="img/profilikon.png" alt="Profilikon">
+                            <a href="#"><img class="closebtn" src="img/closed.png" alt="Burgerknap"></a>
+                        </div>
+                    </div>
+                    <!-- Yderste menu med overordnede menupunkter -->
+                    <div class="overlay-content">
+                        <a id="ht-btn" href="#">Holdtræning &#8599;</a>
+                        <a href="errorpage.html">Personlig træning</a>
+                        <a href="booking.html">Booking</a>
+                        <a href="errorpage.html">Events</a>
+                        <a id="om-btn" href="#">Om HOF &#8599;</a>
+                        <hr class="line">
+                    </div>
+                </div>
+                <!-- Første dropdownmenu -->
+                <div id="ht-nav" class="overlay">
+                    <div class="navtop">
+                        <img class="inner-logo" src="img/logo.webp" alt="Logo">
+                        <a href="#" id="back-btn2" class="closebtn">&larr;</a>
+                    </div>
+                    <div class="overlay-content">
+                        <a href="holdtraening.html">TRX-suspension training</a>
+                        <a href="holdtraening.html">CrossGym</a>
+                        <a href="holdtraening.html">Kvindepower</a>
+                        <a href="holdtraening.html">Fyraftenstræning</a>
+                        <a href="holdtraening.html">Fitnessrun</a>
+                        <hr class="line">
+                    </div>
+                </div>
+                <!-- Anden dropdownmenu -->
+                <div id="om-nav" class="overlay">
+                    <div class="navtop">
+                        <img class="inner-logo" src="img/logo.webp" alt="Logo">
+                        <a href="#" id="back-btn3" class="closebtn">&larr;</a>
+                    </div>
+                    <div class="overlay-content">
+                        <a href="instruktoerer.html">Instruktører</a>
+                        <a href="errorpage.html">Kontakt</a>
+                        <a href="errorpage.html">Anbefalinger</a>
+                        <a href="errorpage.html">Værdier</a>
+                        <hr class="line">
+                    </div>
+                </div>
+                <!-- Den synlige header på mobilstørrelse -->
+                <div class="mobile-header">
+                    <a href="index.html"><img class="logo" src="img/logo.webp" alt="Logo"></a>
+                    <div class="open-menu">
+                        <a href="#"><img id="profile-icon" src="img/profilikon.webp" alt="Profilikon"></a>
+                        <span class="burger-btn"><img src="img/open.webp" alt="Burgerknap"></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Desktopnavigation -->
+        <nav class="desktop-header">
+            <a href="index.html"><img class="logo" src="img/logo.webp" alt="Logo"></a>
+            <!-- Første dropdownpunkt -->
+            <div class="desktop-menu">
+                <div class="dropdown">
+                    <a class="dropbtn">Holdtræning</a>
+                    <div class="dropdown-content">
+                        <a href="holdtraening.html">TRX-suspension training</a>
+                        <a href="holdtraening.html">CrossGym</a>
+                        <a href="holdtraening.html">Kvindepower</a>
+                        <a href="holdtraening.html">Fyraftenstræning</a>
+                        <a href="holdtraening.html">Fitnessrun</a>
+                    </div>
+                </div>
+                <a href="errorpage.html">Personlig træning</a>
+                <a href="booking.html">Booking</a>
+                <a href="errorpage.html">Events</a>
+                <!-- Andet dropdownpunkt -->
+                <div class="dropdown">
+                    <a class="dropbtn">Om HOF</a>
+                    <div class="dropdown-content">
+                        <a href="instruktoerer.html">Instruktører</a>
+                        <a href="errorpage.html">Kontakt</a>
+                        <a href="errorpage.html">Anbefalinger</a>
+                        <a href="errorpage.html">Værdier</a>
+                    </div>
+                </div>
+                <img class="profile-icon" src="img/profilikon.webp" alt="Profile icon">
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main content -->
+    <main>
+        <!-- Page title -->
+        <div class="booking-header-box">
+            <h1 class="page-title booking-pagetitle">Holdkalender</h1>
+            <div>
+                <a href="errorpage.html" class="btn-black btn">Bliv medlem</a>
+            </div>
+        </div>
+        <!-- Bookingoversigt med collapsible | Giver en oversigt over dine nuværende hold -->
+        <section class="booking-hold">
+            <button class="collapsible">Dine kommende hold</button>
+            <div class="col-content">
+                <div class="trx-space"></div>
+                <div class="hold-content">
+                    <p>27 maj</p>
+                    <h4>KvindePower</h4>
+                    <p>60 min</p>
+                </div>
+                <div class="hold-trainer">
+                    <img src="img/charlotte.webp" alt="Profilbillede | Charlotte">
+                    <p>Charlotte Holm</p>
+                </div>
+                <div class="trx-space"></div>
+            </div>
+        </section>
+        <!-- Kalender oversigt -->
+        <section class="booking-calendar-uge22">
+            <div class="booking-overview">
+                <div class="booking-sorting">
+                    <div class="booking-date">
+                        <h3>Maj</h3>
+                    </div>
+                    <!-- Sorteringsknapper, hvor der klikkes frem og tilbage -->
+                    <div class="booking-sort-btn">
+                        <div>
+                            <button class="booking-btn today-btn">I dag</button>
+                        </div>
+                        <div class="filter-btn">
+                            <button class="booking-btn">&#60;</button>
+                            <button class="booking-btn calendar-btn"> <img src="img/calendar.webp"
+                                    alt="Kalenderikon">Uge
+                                22</button>
+                            <button class="booking-btn" id="forward-btn">&#62;</button>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <p>Tilmeld dig din næste træning med få klik - vælg i kalenderen nedenfor</p>
+                </div>
+            </div>
+            <h3 class="date">Uge 22</h3>
+
+            <!-- Booking cards -->
+            <div class="booking-cards">
+                <div class="card">
+                    <div class="card-day">
+                        <h3>Man</h3>
+                    </div>
+                    <div class="card-date">
+                        <h3>27</h3>
+                    </div>
+                    <!-- De specifikke cards som åbner for bookingmodal -->
+                    <div id="kvindepower-booking" class="hold-cards">
+                        <div class="card-hold-info">
+                            <h3>KvindePower</h3>
+                            <p>17-18</p>
+                        </div>
+                        <div class="card-trainer">
+                            <p>Charlotte Holm</p>
+                            <img src="img/charlotte.webp" alt="Profilbillede | Charlotte">
+                        </div>
+                    </div>
+                    <!-- De specifikke cards som åbner for bookingmodal -->
+                    <div class="hold-cards">
+                        <div class="card-hold-info">
+                            <h3>CrossGym</h3>
+                            <p>18:30-19:30</p>
+                        </div>
+                        <div class="card-trainer">
+                            <p>Trine Lindberg</p>
+                            <img src="img/trine.webp" alt="Profilbillede | Trine">
+                        </div>
+                    </div>
+                </div>
+                <!-- Nyt card -->
+                <div class="card">
+                    <div class="card-day">
+                        <h3>Tir</h3>
+                    </div>
+                    <div class="card-date">
+                        <h3>28</h3>
+                    </div>
+                </div>
+                <!-- Nyt card -->
+                <div class="card">
+                    <div class="card-day">
+                        <h3>Ons</h3>
+                    </div>
+                    <div class="card-date">
+                        <h3>29</h3>
+                    </div>
+                    <!-- De specifikke cards som åbner for bookingmodal -->
+                    <div class="hold-cards">
+                        <div class="card-hold-info">
+                            <h3>TRX-suspension training</h3>
+                            <p>17:30-18:30</p>
+                        </div>
+                        <div class="card-trainer">
+                            <p>Charlotte Holm</p>
+                            <img src="img/charlotte.webp" alt="Profilbillede | Charlotte">
+                        </div>
+                    </div>
+                </div>
+                <!-- Nyt card -->
+                <div class="card">
+                    <div class="card-day">
+                        <h3>Tor</h3>
+                    </div>
+                    <div class="card-date">
+                        <h3>30</h3>
+                    </div>
+                    <!-- De specifikke cards som åbner for bookingmodal -->
+                    <div class="hold-cards">
+                        <div class="card-hold-info">
+                            <h3>FitnessRun</h3>
+                            <p>19-20</p>
+                        </div>
+                        <div class="card-trainer">
+                            <p>Charlotte Holm</p>
+                            <img src="img/charlotte.webp" alt="Profilbillede | Charlotte">
+                        </div>
+                    </div>
+                </div>
+                <!-- Nyt card -->
+                <div class="card">
+                    <div class="card-day">
+                        <h3>Fre</h3>
+                    </div>
+                    <div class="card-date">
+                        <h3>31</h3>
+                    </div>
+                    <!-- De specifikke cards som åbner for bookingmodal -->
+                    <div class="hold-cards">
+                        <div class="card-hold-info">
+                            <h3>Fyraftenstræning</h3>
+                            <p>16-16:45</p>
+                        </div>
+                        <div class="card-trainer">
+                            <p>Carsten Pedersen</p>
+                            <img src="img/carsten.webp" alt="Profilbillede | Carsten">
+                        </div>
+                    </div>
+                </div>
+                <!-- Nyt card -->
+                <div class="card">
+                    <div class="card-day">
+                        <h3>Lør</h3>
+                    </div>
+                    <div class="card-date">
+                        <h3>01</h3>
+                    </div>
+                    <!-- De specifikke cards som åbner for bookingmodal -->
+                    <div class="hold-cards">
+                        <div class="card-hold-info">
+                            <h3>CrossGym</h3>
+                            <p>8-9</p>
+                        </div>
+                        <div class="card-trainer">
+                            <p>Charlotte Holm</p>
+                            <img src="img/charlotte.webp" alt="Profilbillede | Charlotte">
+                        </div>
+                    </div>
+                </div>
+                <!-- Nyt card -->
+                <div class="card">
+                    <div class="card-day">
+                        <h3>Søn</h3>
+                    </div>
+                    <div class="card-date">
+                        <h3>02</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Billet cards -->
+        <section class="booking-billetter">
+            <div class="billetter">
+                <div class="seasoncard cards">
+                    <img src="img/seasoncard.webp" alt="Sæsonkort">
+                    <h4>Sæsonkort</h4>
+                    <p>Træn ubegrænset på alle hold for én sæson</p>
+                    <!-- Knap der åbner logind modal -->
+                    <button class="solid-btn modal-btn">Køb</button>
+                </div>
+                <div class="klippekort cards">
+                    <img src="img/klippekort.webp" alt="Klipperkort">
+                    <h4>Klippekort</h4>
+                    <p>Træn 10 gange - adgang til alle hold</p>
+                    <button class="solid-btn modal-btn">Køb</button>
+                </div>
+                <div class="flexkort cards">
+                    <img src="img/flexkort.webp" alt="Flexkort">
+                    <h4>Flextræning</h4>
+                    <p>Adgang til én træning - vælg mellem alle hold</p>
+                    <button class="solid-btn modal-btn">Køb</button>
+                </div>
+            </div>
+            <div>
+                <p>Vælg det type medlemskab, der passer bedst til dig og dine behov. <br> <br>
+                    Vores sæsonkort er til dig, der træner med hver uge, og som kan bruges ubegrænset henover en sæson.
+                    Vores 10-turs klippekort er til dig, der måske ikke træner med hver uge, men som stadig ønsker at
+                    spare penge. <br> <br>
+                    Vi tilbyder også en flex-træning til dig, der muligvis skal prøve en træning af, for at se om det er
+                    noget for dig. </p>
+            </div>
+        </section>
+
+
+        <!-- 
+            Content der erstatter noget andet
+        -->
+
+
+        <!-- Logind modal -->
+        <div class="login-modal">
+            <div class="login-modal-content">
+                <div>
+                    <img id="trail7" src="img/trail7.webp" alt="">
+                    <div class="cross">
+                        <div class="horizontal"></div>
+                        <div class="vertical"></div>
+                    </div>
+                </div>
+                <div class="login-content current-container">
+                    <div class="form-content">
+                        <h2>Log ind</h2>
+                        <!-- Label form -->
+                        <form class="login-form" action="errorpage.html">
+                            <label class="login-label">E-mail eller brugernavn</label>
+                            <input class="login-input" type="text" name="E-mail eller adgangskode">
+                            <label class="login-label">Adgangskode</label>
+                            <input class="login-input" type="password" name="Adgangskode">
+                            <input class="input-btn" type="submit" value="Log ind">
+                        </form>
+                        <div class="tilmeld-link">
+                            <h4>Ny hos HOF?</h4>
+                            <!-- Content skift i HTML -->
+                            <a id="tilmeld-dig">Tilmeld dig her!</a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img id="trail8" src="img/trail8.webp" alt="Trailgrafik">
+                </div>
+            </div>
+        </div>
+
+        <!-- Tilmeld content der ændres i HTML'en -->
+        <div class="signup-content">
+            <div class="form-content">
+                <h2>Tilmeld dig</h2>
+                <form class="login-form" action="errorpage.html">
+                    <!-- Form content -->
+                    <label class="login-label">Fornavn</label>
+                    <input class="login-input" type="text" name="E-mail eller adgangskode">
+                    <label class="login-label">E-mail eller brugernavn</label>
+                    <input class="login-input" type="text" name="E-mail eller adgangskode">
+                    <label class="login-label">Adgangskode</label>
+                    <input class="login-input" type="password" name="E-mail eller adgangskode">
+                    <label class="login-label">Bekræft adgangskode</label>
+                    <input class="login-input" type="password" name="Adgangskode">
+                    <input class="input-btn" type="submit" value="Tilmeld dig">
+                </form>
+                <div class="tilmeld-link">
+                    <h4>Har du allerede en konto?</h4>
+                    <a id="login">Logind her!</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Booking modal -->
+        <div class="booking-modal">
+            <div class="booking-modal-content">
+                <div id="booking-close" class="cross">
+                    <div class="horizontal"></div>
+                    <div class="vertical"></div>
+                </div>
+                <div class="tilmelding">
+                    <div class="tilmelding-header">
+                        <h2>KvindePower</h2>
+                    </div>
+                    <div class="tilmelding-tid">
+                        <div>
+                            <h4>17:00</h4>
+                            <p>60 min</p>
+                        </div>
+                        <div>
+                            <h4>Man. 1 maj</h4>
+                        </div>
+                    </div>
+                    <div class="tilmelding-instructor">
+                        <img src="img/charlotte.webp" alt="Profilbillede | Charlotte">
+                        <p>Charlotte Holm</p>
+                    </div>
+                    <div class="tilmeldte">
+                        <img src="img/tidikon.webp" alt="Tidsikon">
+                        <p>10/25 deltagere tilmeldt</p>
+                    </div>
+                </div>
+                <div class="tilmelding-book">
+                    <p>Holdet tager over hvor Team Q slap sidste år. Der er plads til alle kvinder uanset
+                        træningserfaring, fysisk form og eventuelle skavanker/problematikker. Træningen tager
+                        udgangspunkt i at opbygge et stærkt fysisk fundament, krydret med lidt leg og sjov. Vi skal
+                        arbejde med puls- og styrketræning, balance, udholdenhed mv. Og træningen vil være et godt afsæt
+                        til efterfølgende at fortsætte på CrossGym eller et af de andre spændende hold vi tilbyder.</p>
+                    <a id="booking-confirm" class="solid-btn return">Book din træning</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bookingbekræftelse der erstatter noget content i booking modalet -->
+        <div class="tilmelding-check">
+            <div class="tilmelding-header">
+                <h2>Din booking er bekræftet!</h2>
+                <h2>KvindePower</h2>
+            </div>
+            <div class="tilmelding-tid">
+                <div>
+                    <h4>17:00</h4>
+                    <p>60 min</p>
+                </div>
+                <div>
+                    <h4>Man. 1 maj</h4>
+                </div>
+                <div>
+                    <img id="checkmark" src="img/checkmark.webp" alt="Checkmark">
+                </div>
+            </div>
+            <div class="tilmeldte">
+                <img src="img/tidikon.webp" alt="Tidsikon">
+                <p>11/25 deltagere tilmeldt</p>
+            </div>
+            <a id="back-booking" class="solid-btn back-to-book">Tilbage til booking</a>
+        </div>
+
+        <!-- Nyt kalender content -->
+        <!-- Har samme opsætning som ovenstående cards -->
+        <section class="booking-calendar-uge23">
+            <div class="booking-overview">
+                <div class="booking-sorting">
+                    <!-- Ændring i dato -->
+                    <div class="booking-date">
+                        <h3>Juni</h3>
+                    </div>
+                    <div class="booking-sort-btn">
+                        <div>
+                            <button class="booking-btn today-btn">I dag</button>
+                        </div>
+                        <div class="filter-btn">
+                            <button class="booking-btn" id="back-btn">&#60;</button>
+                            <button class="booking-btn calendar-btn"> <img src="img/calendar.png" alt="Kalender">Uge
+                                23</button>
+                            <button class="booking-btn">&#62;</button>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <p>Tilmeld dig din næste træning med få klik - vælg i kalenderen nedenfor</p>
+                </div>
+            </div>
+            <!-- Ændring i uge nummer + ændringer i datoer -->
+            <h3 class="date">Uge 23</h3>
+            <div class="booking-cards">
+                <div class="card">
+                    <div class="card-day">
+                        <h3>Man</h3>
+                    </div>
+
+                    <div class="card-date">
+                        <h3>03</h3>
+                    </div>
+                    <div class="hold-cards">
+                        <div class="card-hold-info">
+                            <h3>KvindePower</h3>
+                            <p>17-18</p>
+                        </div>
+                        <div class="card-trainer">
+                            <p>Charlotte Holm</p>
+                            <img src="img/charlotte.webp" alt="Profilbillede | Charlotte">
+                        </div>
+                    </div>
+                    <div class="hold-cards">
+                        <div class="card-hold-info">
+                            <h3>CrossGym</h3>
+                            <p>18:30-19:30</p>
+                        </div>
+                        <div class="card-trainer">
+                            <p>Trine Lindberg</p>
+                            <img src="img/trine.webp" alt="Profilbillede | Trine">
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-day">
+                        <h3>Tir</h3>
+                    </div>
+                    <div class="card-date">
+                        <h3>04</h3>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-day">
+                        <h3>Ons</h3>
+                    </div>
+                    <div class="card-date">
+                        <h3>05</h3>
+                    </div>
+                    <div class="hold-cards">
+                        <div class="card-hold-info">
+                            <h3>TRX-suspension training</h3>
+                            <p>17:30-18:30</p>
+                        </div>
+                        <div class="card-trainer">
+                            <p>Charlotte Holm</p>
+                            <img src="img/charlotte.webp" alt="Profilbillede | Charlotte">
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-day">
+                        <h3>Tor</h3>
+                    </div>
+                    <div class="card-date">
+                        <h3>06</h3>
+                    </div>
+                    <div class="hold-cards">
+                        <div class="card-hold-info">
+                            <h3>FitnessRun</h3>
+                            <p>19-20</p>
+                        </div>
+                        <div class="card-trainer">
+                            <p>Charlotte Holm</p>
+                            <img src="img/charlotte.webp" alt="Profilbillede | Charlotte">
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-day">
+                        <h3>Fre</h3>
+                    </div>
+                    <div class="card-date">
+                        <h3>07</h3>
+                    </div>
+                    <div class="hold-cards">
+                        <div class="card-hold-info">
+                            <h3>Fyraftenstræning</h3>
+                            <p>16-16:45</p>
+                        </div>
+                        <div class="card-trainer">
+                            <p>Carsten Pedersen</p>
+                            <img src="img/carsten.webp" alt="Profilbillede | Carsten">
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-day">
+                        <h3>Lør</h3>
+                    </div>
+                    <div class="card-date">
+                        <h3>08</h3>
+                    </div>
+                    <div class="hold-cards">
+                        <div class="card-hold-info">
+                            <h3>CrossGym</h3>
+                            <p>8-9</p>
+                        </div>
+                        <div class="card-trainer">
+                            <p>Charlotte Holm</p>
+                            <img src="img/charlotte.webp" alt="Profilbillede | Charlotte">
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-day">
+                        <h3>Søn</h3>
+                    </div>
+                    <div class="card-date">
+                        <h3>09</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <div class="footer-menupunkter">
+                    <div class="footer-section">
+                        <h4>Holdtræning</h4>
+                        <ul class="footer-mobile-menu">
+                            <li><a href="holdtraening.html">TRX-suspension</a></li>
+                            <li><a href="holdtraening.html">Training</a></li>
+                            <li><a href="holdtraening.html">CrossGym</a></li>
+                            <li><a href="holdtraening.html">Kvindepower</a></li>
+                            <li><a href="holdtraening.html">Fyraftenstræning</a></li>
+                            <li><a href="holdtraening.html">FitnessRun</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4><a href="errorpage.html">Personlig træning</a></h4>
+                    </div>
+                    <div class="footer-section">
+                        <h4><a href="booking.html">Booking</a></h4>
+                    </div>
+                    <div class="footer-section">
+                        <h4><a href="errorpage.html">Events</a></h4>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Om HOF</h4>
+                        <ul class="footer-mobile-menu">
+                            <li><a href="instruktoerer.html">Instruktører</a></li>
+                            <li><a href="errorpage.html">Kontakt</a></li>
+                            <li><a href="anbefalinger.html">Anbefalinger</a></li>
+                            <li><a href="errorpage.html">Værdier</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="social">
+                    <a href="https://www.instagram.com/holmoutdoorfitness/" target="_blank"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=100063334863141" target="_blank"><i
+                            class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+            <div class="footer-right">
+                <div class="footer-section signup">
+                    <h4>Tilmeld dig</h4>
+                    <a class="btn" href="booking.html">BOOK DIN TRÆNING</a>
+                </div>
+                <div class="footer-section contact">
+                    <p>Vadstedvej 21, Oksenvad<br>6560 Sommersted<br>Tlf +45 5380 6048<br>holmoutdoorfitness@outlook.com
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
